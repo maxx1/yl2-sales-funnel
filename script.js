@@ -8,7 +8,8 @@ function initCountdown() {
   if (!els.length) return;
   // Set drop end to 72 hours from first visit (persisted)
   let end = localStorage.getItem('yl2_drop_end');
-  if (!end) {
+  if (!end || parseInt(end) <= Date.now()) {
+    // Reset timer if not set or already expired
     end = Date.now() + 72 * 60 * 60 * 1000;
     localStorage.setItem('yl2_drop_end', end);
   }
