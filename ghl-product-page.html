@@ -298,7 +298,7 @@ p { color: #A1A1AA !important; }
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
-      <a href="ghl-checkout-v7.html" class="header-cta yl2-checkout-btn">Buy Now</a>
+      <a href="/check-out-page" class="header-cta yl2-checkout-btn">Buy Now</a>
       <button class="mobile-toggle" aria-label="Menu">☰</button>
     </div>
   </header>
@@ -355,7 +355,7 @@ p { color: #A1A1AA !important; }
           </div>
 
           <!-- ADD TO CART -->
-          <a href="ghl-checkout-v7.html" class="cta-primary cta-pulse yl2-checkout-btn" style="width:100%;justify-content:center;margin-top:8px;" id="addToCart">
+          <a href="/check-out-page" class="cta-primary cta-pulse yl2-checkout-btn" style="width:100%;justify-content:center;margin-top:8px;" id="addToCart">
             <span>Add to Cart — $49.99</span>
           </a>
 
@@ -553,7 +553,7 @@ p { color: #A1A1AA !important; }
     <div class="container text-center">
       <h2 class="fade-up">Don't Just Watch the Movement.<br><span class="text-gradient">Wear It.</span></h2>
       <p class="fade-up">Launch price $49.99 — retail $69.99. Free shipping. Limited stock. No excuses.</p>
-      <a href="ghl-checkout-v7.html" class="cta-primary cta-pulse yl2-checkout-btn fade-up" style="margin-top:8px;"><span>Get Your Hoodie Now →</span></a>
+      <a href="/check-out-page" class="cta-primary cta-pulse yl2-checkout-btn fade-up" style="margin-top:8px;"><span>Get Your Hoodie Now →</span></a>
       <div class="social-ticker fade-up" style="margin-top:24px;">
         <span class="dot"></span> <span class="viewer-count">127</span> people viewing this right now
       </div>
@@ -732,7 +732,7 @@ function updateCheckoutLinks() {
   
   const checkoutBtns = document.querySelectorAll('.yl2-checkout-btn');
   checkoutBtns.forEach(btn => {
-    let href = btn.getAttribute('href') || 'ghl-checkout-v7.html';
+    let href = btn.getAttribute('href') || '/check-out-page';
     const qIndex = href.indexOf('?');
     if (qIndex !== -1) {
       href = href.substring(0, qIndex);

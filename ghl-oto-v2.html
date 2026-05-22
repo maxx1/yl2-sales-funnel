@@ -872,7 +872,7 @@
 
       <!-- NO! Thank you link -->
       <!-- Point this to your GHL Thank You / Next Funnel Step -->
-      <a href="ghl-thankyou.html" class="oto-btn-no" id="noBtn" onclick="otoNoThanks(event)">
+      <a href="/thankyou-page" class="oto-btn-no" id="noBtn" onclick="otoNoThanks(event)">
         No thanks, just send my hoodie →
       </a>
 
@@ -1303,7 +1303,7 @@
 
       if (!finalLink) {
         // Fallback or preview
-        finalLink = `#ghl-upsell-submit?cat=${currentCategory}&color=${currentColor}&size=${currentSize}`;
+        finalLink = `/thankyou-page?cat=${currentCategory}&color=${currentColor}&size=${currentSize}`;
       }
 
       console.log(`[YL2 OTO] One-click upgrade clicked: ${currentCategory} | ${currentColor} | ${currentSize}`);
