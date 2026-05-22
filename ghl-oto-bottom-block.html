@@ -1,0 +1,116 @@
+<!-- ═══════════════════════════════════════════════════════
+     YL² OTO — BOTTOM CODE BLOCK (paste BELOW GHL Yes/No buttons)
+     Contains: Guarantee, footer, GHL background nuke script, timer
+     ═══════════════════════════════════════════════════════ -->
+
+<!-- Guarantee -->
+<div style="max-width:780px;margin:0 auto;padding:0 24px;">
+  <div class="oto-guarantee">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <span>100% risk-free. If you change your mind, just email us within 30 days for a full refund on the digital collection. No questions asked.</span>
+  </div>
+  
+  <!-- Social proof -->
+  <div style="text-align:center;margin-top:28px;font-family:'Inter',sans-serif;font-size:.82rem;color:#71717A !important;">
+    <span style="display:inline-block;width:8px;height:8px;background:#10B981;border-radius:50%;margin-right:8px;animation:oto-blink 1.5s infinite;"></span>
+    <span id="otoViewers">47</span> other buyers are viewing this right now
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="oto-footer">
+  <p>&copy; 2026 You Live and You Learn Clothing LLC. All rights reserved.</p>
+  <p style="color:#52525B !important;font-size:.7rem;">This is a one-time offer available only immediately after purchase. If you leave this page, this pricing is gone.</p>
+</div>
+
+<style>
+@keyframes oto-blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+/* GHL YES button override */
+.oto-container + * button,
+.oto-container ~ * button[class*="btn"],
+.oto-container ~ * a[class*="btn"] {
+  font-family: 'Outfit', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  border-radius: 50px !important;
+  padding: 16px 40px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .04em !important;
+  transition: .3s ease !important;
+}
+</style>
+
+<!-- Scripts -->
+<script>
+// OTO Timer (10 minutes)
+(function() {
+  var secs = 10 * 60;
+  var el = document.getElementById('otoTimer');
+  if (!el) return;
+  var stored = localStorage.getItem('yl2_oto_end');
+  if (stored) {
+    secs = Math.max(0, Math.floor((parseInt(stored) - Date.now()) / 1000));
+  } else {
+    localStorage.setItem('yl2_oto_end', Date.now() + secs * 1000);
+  }
+  setInterval(function() {
+    if (secs <= 0) { el.textContent = '0:00'; return; }
+    secs--;
+    var m = Math.floor(secs / 60);
+    var s = secs % 60;
+    el.textContent = m + ':' + String(s).padStart(2,'0');
+  }, 1000);
+})();
+
+// Randomize viewer count
+(function() {
+  var el = document.getElementById('otoViewers');
+  if (!el) return;
+  setInterval(function() {
+    var base = 40 + Math.floor(Math.random() * 25);
+    el.textContent = base;
+  }, 8000);
+})();
+
+// GHL Background Nuke
+function otoNukeGHL() {
+  var selectors = [
+    '[class*="hl_"]', '[class*="hl-"]',
+    '[id*="section"]', '[id*="row"]', '[id*="preview"]', '[id*="page"]',
+    '[class*="inner-section"]', '[class*="full-section"]',
+    '[class*="container-fluid"]', 'main', 'article', 'aside'
+  ];
+  selectors.forEach(function(sel) {
+    document.querySelectorAll(sel).forEach(function(el) {
+      el.style.setProperty('background-color', '#0a0a0a', 'important');
+      el.style.setProperty('background', '#0a0a0a', 'important');
+      el.style.setProperty('max-width', '100%', 'important');
+      el.style.setProperty('width', '100%', 'important');
+    });
+  });
+  var wrapper = document.querySelector('.oto-urgency');
+  if (wrapper) {
+    var el = wrapper.parentElement;
+    while (el && el !== document.documentElement) {
+      el.style.setProperty('background-color', '#0a0a0a', 'important');
+      el.style.setProperty('background', '#0a0a0a', 'important');
+      el.style.setProperty('max-width', '100%', 'important');
+      el.style.setProperty('width', '100%', 'important');
+      el.style.setProperty('padding-left', '0', 'important');
+      el.style.setProperty('padding-right', '0', 'important');
+      el = el.parentElement;
+    }
+  }
+  document.documentElement.style.setProperty('background', '#0a0a0a', 'important');
+  document.body.style.setProperty('background', '#0a0a0a', 'important');
+}
+document.addEventListener('DOMContentLoaded', function() {
+  otoNukeGHL();
+  setTimeout(otoNukeGHL, 300);
+  setTimeout(otoNukeGHL, 800);
+  setTimeout(otoNukeGHL, 1500);
+  setTimeout(otoNukeGHL, 3000);
+});
+window.addEventListener('load', otoNukeGHL);
+</script>

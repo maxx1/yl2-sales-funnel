@@ -53,8 +53,72 @@ function initScrollAnimations() {
   items.forEach(el => obs.observe(el));
 }
 
-// --- IMAGE GALLERY ---
+// --- DYNAMIC IMAGE GALLERY ENGINE ---
+const GALLERY_DATA = {
+  blue: [
+    "assets/DSC07423-2_Original.jpg",
+    "assets/DSC07467.jpg",
+    "assets/DSC07501.jpg",
+    "assets/DSC07564_Original.jpg",
+    "assets/DSC07718_Original.jpg"
+  ],
+  black: [
+    "assets/DSC07504.jpg",
+    "assets/DSC07539.jpg",
+    "assets/IMG_9092.JPG",
+    "assets/DSC07510_optimized.jpg",
+    "assets/DSC07520_optimized.jpg",
+    "assets/DSC07535_optimized.jpg",
+    "assets/DSC07549_optimized.jpg",
+    "assets/DSC08586_Original.jpg",
+    "assets/DSC08740_Original.jpg"
+  ]
+};
+
+function updateGalleryColor(color) {
+  const mainImage = document.querySelector('.gallery-main img');
+  const thumbsContainer = document.querySelector('.gallery-thumbs');
+  if (!mainImage || !thumbsContainer) return;
+  
+  const images = GALLERY_DATA[color] || GALLERY_DATA.blue;
+  
+  // Set main image to the first image of the selected color
+  mainImage.style.opacity = '0';
+  setTimeout(() => {
+    mainImage.src = images[0];
+    mainImage.alt = `YL² Premium Hoodie - ${color.charAt(0).toUpperCase() + color.slice(1)}`;
+    mainImage.style.opacity = '1';
+  }, 200);
+
+  // Render new thumbnails
+  thumbsContainer.innerHTML = '';
+  images.forEach((imgUrl, index) => {
+    const thumb = document.createElement('div');
+    thumb.className = `gallery-thumb${index === 0 ? ' active' : ''}`;
+    
+    const img = document.createElement('img');
+    img.src = imgUrl;
+    img.alt = `${color.charAt(0).toUpperCase() + color.slice(1)} view ${index + 1}`;
+    
+    thumb.appendChild(img);
+    thumbsContainer.appendChild(thumb);
+    
+    // Bind click event to thumbnail
+    thumb.addEventListener('click', () => {
+      thumbsContainer.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+      
+      mainImage.style.opacity = '0';
+      setTimeout(() => {
+        mainImage.src = imgUrl;
+        mainImage.style.opacity = '1';
+      }, 200);
+    });
+  });
+}
+
 function initGallery() {
+  // Main thumbnail clicks logic when first loading page
   const main = document.querySelector('.gallery-main img');
   const thumbs = document.querySelectorAll('.gallery-thumb');
   if (!main || !thumbs.length) return;
@@ -85,20 +149,12 @@ function initSizeSelector() {
 // --- COLOR SELECTOR ---
 function initColorSelector() {
   const swatches = document.querySelectorAll('.color-swatch');
-  const main = document.querySelector('.gallery-main img');
-  const colorImages = {
-    blue: 'assets/DSC07423-2_Original.jpg',
-    black: 'assets/IMG_9092.JPG'
-  };
   swatches.forEach(s => {
     s.addEventListener('click', () => {
       swatches.forEach(x => x.classList.remove('active'));
       s.classList.add('active');
       const color = s.dataset.color;
-      if (main && colorImages[color]) {
-        main.style.opacity = '0';
-        setTimeout(() => { main.src = colorImages[color]; main.style.opacity = '1'; }, 200);
-      }
+      updateGalleryColor(color);
     });
   });
 }
@@ -172,4 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSocialTicker();
   initStockCounter();
   initSmoothScroll();
+  
+  // Set initial gallery color layout
+  updateGalleryColor('blue');
 });

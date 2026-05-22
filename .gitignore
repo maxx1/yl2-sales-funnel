@@ -1,0 +1,20 @@
+# Ignore OS metadata
+.DS_Store
+assets/.DS_Store
+
+# Ignore Apple Pages documents
+*.pages
+
+# Ignore large archives and raw photography assets
+*.zip
+assets/*.zip
+assets/Spring 2026 Collection/
+assets/Spring 2026 Collection (Unicode Encoding Conflict)/
+assets/Leopard Print Yoga Set photoshoot PARKING garage/
+assets/Leopard Print Yoga Set photoshoot PARKING garage (Unicode Encoding Conflict)/
+assets/YL2 3D Puff Print Photos/
+assets/YL2 3D Puff Print Photos-20260521T164025Z-3-001.zip
+
+# Ignore local diff files
+v6_vs_v7_diff.txt
+v6_vs_v7_full_diff.txt

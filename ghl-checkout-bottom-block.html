@@ -1,0 +1,196 @@
+<!-- ═══════════════════════════════════════════════════════
+     YL² CHECKOUT — BOTTOM CODE BLOCK
+     Goes BELOW the GHL Row (full width)
+     Contains: Trust badges, payment icons, testimonials, footer
+     ═══════════════════════════════════════════════════════ -->
+
+<style>
+.yl2-trust-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  background: #0a0a0a !important;
+}
+.yl2-secure-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: .75rem;
+  color: #71717A !important;
+  padding: 16px 0;
+  text-align: center;
+}
+.yl2-secure-bar svg { width: 14px; height: 14px; flex-shrink: 0; }
+.yl2-trust-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 28px 0;
+  border-top: 1px solid rgba(255,255,255,.06);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+.yl2-trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: .8rem;
+  color: #A1A1AA !important;
+  transition: .3s ease;
+}
+.yl2-trust-badge:hover { color: #FFFFFF !important; }
+.yl2-trust-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.yl2-trust-icon.shield { background: rgba(16,185,129,.1); }
+.yl2-trust-icon.lock   { background: rgba(59,130,246,.1); }
+.yl2-trust-icon.card   { background: rgba(245,158,11,.1); }
+.yl2-trust-icon.refund { background: rgba(239,68,68,.1); }
+.yl2-trust-label {
+  font-weight: 600;
+  font-size: .78rem;
+  color: #FFFFFF !important;
+  display: block;
+}
+.yl2-trust-sub {
+  font-size: .7rem;
+  color: #71717A !important;
+  font-weight: 400;
+}
+.yl2-payment-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px 0;
+  flex-wrap: wrap;
+}
+.yl2-pay-icon {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-family: 'Outfit', sans-serif;
+  font-size: .7rem;
+  font-weight: 700;
+  color: #A1A1AA !important;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.yl2-social-proof {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  background: #0a0a0a !important;
+}
+.yl2-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.yl2-proof-card {
+  background: #141414 !important;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 12px;
+  padding: 24px;
+  transition: .3s ease;
+}
+.yl2-proof-card:hover {
+  border-color: rgba(59,130,246,.2);
+  transform: translateY(-2px);
+}
+.yl2-proof-stars { color: #F59E0B; font-size: .85rem; letter-spacing: 2px; margin-bottom: 12px; }
+.yl2-proof-text { font-family: 'Inter', sans-serif; font-size: .85rem; color: #A1A1AA !important; font-style: italic; line-height: 1.6; margin-bottom: 14px; }
+.yl2-proof-author { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: .82rem; color: #FFFFFF !important; }
+.yl2-proof-verified { font-size: .7rem; color: #10B981 !important; font-weight: 500; }
+.yl2-footer {
+  background: #0a0a0a !important;
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 32px 24px;
+  text-align: center;
+}
+.yl2-footer p { font-family: 'Inter', sans-serif; font-size: .72rem; color: #52525B !important; margin-bottom: 6px; line-height: 1.6; }
+.yl2-footer a { color: #71717A !important; text-decoration: underline; transition: .3s ease; }
+.yl2-footer a:hover { color: #A1A1AA !important; }
+
+@media (max-width: 768px) {
+  .yl2-trust-row { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .yl2-proof-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .yl2-trust-row { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- ═══ SECURE PAYMENT BAR ═══ -->
+<div class="yl2-trust-section">
+  <div class="yl2-secure-bar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+    256-bit SSL Encrypted &nbsp;|&nbsp; Your data is safe &nbsp;|&nbsp; PCI Compliant
+  </div>
+  <div class="yl2-trust-row">
+    <div class="yl2-trust-badge">
+      <div class="yl2-trust-icon shield">🛡️</div>
+      <div><span class="yl2-trust-label">Secure Checkout</span><span class="yl2-trust-sub">256-bit SSL encryption</span></div>
+    </div>
+    <div class="yl2-trust-badge">
+      <div class="yl2-trust-icon lock">🔒</div>
+      <div><span class="yl2-trust-label">Stripe Payments</span><span class="yl2-trust-sub">Bank-level security</span></div>
+    </div>
+    <div class="yl2-trust-badge">
+      <div class="yl2-trust-icon card">💳</div>
+      <div><span class="yl2-trust-label">All Cards Accepted</span><span class="yl2-trust-sub">Visa, MC, Amex, Discover</span></div>
+    </div>
+    <div class="yl2-trust-badge">
+      <div class="yl2-trust-icon refund">↩️</div>
+      <div><span class="yl2-trust-label">30-Day Returns</span><span class="yl2-trust-sub">No questions asked</span></div>
+    </div>
+  </div>
+  <div class="yl2-payment-row">
+    <div class="yl2-pay-icon">VISA</div>
+    <div class="yl2-pay-icon">MASTERCARD</div>
+    <div class="yl2-pay-icon">AMEX</div>
+    <div class="yl2-pay-icon">DISCOVER</div>
+    <div class="yl2-pay-icon">APPLE PAY</div>
+  </div>
+</div>
+
+<!-- ═══ SOCIAL PROOF ═══ -->
+<div class="yl2-social-proof">
+  <div class="yl2-proof-grid">
+    <div class="yl2-proof-card">
+      <div class="yl2-proof-stars">★★★★★</div>
+      <p class="yl2-proof-text">"The quality is insane for the price. Heavyweight, clean embroidery, fits perfect. This is not your average hoodie."</p>
+      <div class="yl2-proof-author">Marcus T.</div>
+      <div class="yl2-proof-verified">✓ Verified Buyer</div>
+    </div>
+    <div class="yl2-proof-card">
+      <div class="yl2-proof-stars">★★★★★</div>
+      <p class="yl2-proof-text">"Got mine in 3 days. The packaging alone made me feel like I bought something premium. Wearing it everywhere now."</p>
+      <div class="yl2-proof-author">Deja R.</div>
+      <div class="yl2-proof-verified">✓ Verified Buyer</div>
+    </div>
+    <div class="yl2-proof-card">
+      <div class="yl2-proof-stars">★★★★★</div>
+      <p class="yl2-proof-text">"Finally a streetwear brand that actually means something. Love the message behind YL². Copped two."</p>
+      <div class="yl2-proof-author">Jaylen W.</div>
+      <div class="yl2-proof-verified">✓ Verified Buyer</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<div class="yl2-footer">
+  <p>&copy; 2026 You Live and You Learn Clothing LLC. All rights reserved.</p>
+  <p><a href="#">Terms</a> &nbsp;·&nbsp; <a href="#">Privacy</a> &nbsp;·&nbsp; <a href="#">Contact</a></p>
+  <p style="margin-top:12px;">Questions? Email <a href="mailto:support@yl2clothing.com">support@yl2clothing.com</a></p>
+</div>

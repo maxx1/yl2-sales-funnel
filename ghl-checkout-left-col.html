@@ -1,0 +1,40 @@
+<!-- ═══════════════════════════════════════════════════════
+     YL² CHECKOUT — LEFT COLUMN CODE BLOCK
+     Goes INSIDE the LEFT column of a GHL Row, ABOVE the Order Form
+     Contains: Timer bar + section heading
+     ═══════════════════════════════════════════════════════ -->
+
+<!-- Reservation Timer -->
+<div class="yl2-timer-bar">
+  <span class="fire">🔥</span>
+  <span>Your hoodie is reserved for</span>
+  <span class="timer" id="yl2ReserveTimer">15:00</span>
+</div>
+
+<!-- Section heading -->
+<h2 class="yl2-section-title">Complete Your Order</h2>
+<p class="yl2-section-sub">Fill out the details below to secure your YL² Premium Hoodie at the launch price.</p>
+
+<!-- ⚠️ GHL ORDER FORM ELEMENT GOES DIRECTLY BELOW THIS IN THE SAME LEFT COLUMN ⚠️ -->
+
+<!-- Timer Script -->
+<script>
+(function() {
+  var secs = 15 * 60;
+  var el = document.getElementById('yl2ReserveTimer');
+  if (!el) return;
+  var stored = localStorage.getItem('yl2_checkout_end');
+  if (stored) {
+    secs = Math.max(0, Math.floor((parseInt(stored) - Date.now()) / 1000));
+  } else {
+    localStorage.setItem('yl2_checkout_end', Date.now() + secs * 1000);
+  }
+  setInterval(function() {
+    if (secs <= 0) return;
+    secs--;
+    var m = Math.floor(secs / 60);
+    var s = secs % 60;
+    el.textContent = String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+  }, 1000);
+})();
+</script>

@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wait! Exclusive One-Time Offer — YL²</title>
+  <link rel="icon" href="https://maxx1.github.io/yl2-sales-funnel/assets/image0.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       YL² OTO STYLE OVERRIDES — STREETWEAR PREMIUM
+       Locks colors, cards, and buttons to match checkout.html
+       ═══════════════════════════════════════════════════════ */
+    html, body, main, article, aside,
+    [class*="hl_"], [class*="hl-"],
+    [id*="section"], [id*="row"], [id*="preview"], [id*="page"] {
+      background-color: #0a0a0a !important;
+      color: #FFFFFF !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    [class*="hl_"], [class*="hl-"], [class*="inner-section"],
+    [class*="full-section"], [class*="container-fluid"] {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin: 0 !important;
+    }
+
+    :root {
+      --oto-bg: #0a0a0a;
+      --oto-card: #141414;
+      --oto-card-hover: #1a1a1a;
+      --oto-blue: #3B82F6;
+      --oto-blue-light: #60A5FA;
+      --oto-blue-glow: rgba(59, 130, 246, 0.25);
+      --oto-red: #EF4444;
+      --oto-red-light: #F87171;
+      --oto-green: #10B981;
+      --oto-gold: #F59E0B;
+      --oto-text: #FFFFFF;
+      --oto-text-dim: #A1A1AA;
+      --oto-text-muted: #71717A;
+      --oto-border: rgba(255, 255, 255, 0.08);
+      --oto-radius: 12px;
+      --oto-radius-sm: 8px;
+      --oto-font-head: 'Outfit', sans-serif;
+      --oto-font-body: 'Inter', sans-serif;
+      --oto-transition: .3s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    /* Reset & Utilities */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--oto-bg);
+      color: var(--oto-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: inherit;
+    }
+
+    /* ══════════════ URGENCY BAR ══════════════ */
+    .oto-urgency {
+      background: linear-gradient(90deg, #EF4444, #DC2626) !important;
+      padding: 12px 16px;
+      text-align: center;
+      font-family: var(--oto-font-body);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #fff !important;
+      line-height: 1.4;
+      z-index: 999;
+    }
+    .oto-urgency span {
+      animation: oto-flash 2s ease-in-out infinite;
+    }
+    @keyframes oto-flash {
+      0%, 100% { opacity: 1 }
+      50% { opacity: .7 }
+    }
+
+    /* ══════════════ HEADER ══════════════ */
+    .oto-header {
+      background: var(--oto-bg) !important;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--oto-border);
+    }
+    .oto-header img {
+      height: 32px;
+      filter: invert(1);
+    }
+
+    /* ══════════════ MAIN WORKSPACE ══════════════ */
+    .oto-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      text-align: center;
+    }
+
+    /* Progress Banner */
+    .oto-progress-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.08) !important;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 50px;
+      padding: 8px 20px;
+      font-family: var(--oto-font-head);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--oto-green) !important;
+      margin-bottom: 24px;
+    }
+
+    .oto-headline {
+      font-family: var(--oto-font-head);
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -.02em;
+    }
+    .oto-headline .highlight {
+      background: linear-gradient(135deg, var(--oto-blue-light), var(--oto-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .oto-subheadline {
+      font-family: var(--oto-font-body);
+      font-size: 1.02rem;
+      color: var(--oto-text-dim) !important;
+      max-width: 620px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    /* Timer Area */
+    .oto-timer-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+      font-family: var(--oto-font-body);
+      font-size: .85rem;
+      color: var(--oto-text-dim) !important;
+    }
+    .oto-timer-clock {
+      font-family: var(--oto-font-head);
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--oto-red) !important;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.18);
+      border-radius: 8px;
+      padding: 6px 14px;
+    }
+
+    /* Interactive Tab Selector */
+    .oto-tab-label {
+      font-family: var(--oto-font-head);
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--oto-blue-light) !important;
+      margin-bottom: 16px;
+    }
+    .oto-tabs {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+      justify-content: center;
+    }
+    .oto-tab {
+      flex: 1;
+      max-width: 240px;
+      padding: 16px 20px;
+      border-radius: 50px;
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.02) !important;
+      color: var(--oto-text-dim) !important;
+      font-family: var(--oto-font-head);
+      font-size: .9rem;
+      font-weight: 700;
+      transition: var(--oto-transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .oto-tab.active {
+      border-color: var(--oto-blue);
+      background: rgba(59, 130, 246, 0.1) !important;
+      color: var(--oto-text) !important;
+      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+    }
+    .oto-tab:hover {
+      border-color: rgba(59, 130, 246, 0.5);
+    }
+    .oto-tab .icon {
+      font-size: 1.4rem;
+    }
+
+    /* ══════════════ MAIN INTERACTIVE CARD ══════════════ */
+    .oto-card {
+      background: var(--oto-card) !important;
+      border: 1px solid var(--oto-border);
+      border-radius: var(--oto-radius);
+      padding: 32px;
+      text-align: left;
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 32px;
+      align-items: start;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Stock Ticker Banner */
+    .oto-stock-ticker {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, rgba(239,68,68,0.15), rgba(239,68,68,0.05));
+      border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+      padding: 8px 24px;
+      font-size: .8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .oto-stock-ticker .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--oto-red);
+      border-radius: 50%;
+      animation: oto-blink 1.5s infinite;
+    }
+    .oto-stock-ticker .stock-alert-text {
+      color: var(--oto-red-light) !important;
+    }
+
+    /* Showcase Layout */
+    .oto-showcase-gallery {
+      margin-top: 24px; /* offset for stock ticker */
+    }
+    .oto-gallery-main {
+      border-radius: var(--oto-radius-sm);
+      overflow: hidden;
+      aspect-ratio: 4/5;
+      background: #000;
+      border: 1px solid var(--oto-border);
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .oto-gallery-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--oto-transition);
+    }
+    .oto-gallery-main img:hover {
+      transform: scale(1.03);
+    }
+    .oto-gallery-thumbs {
+      display: flex;
+      gap: 8px;
+    }
+    .oto-gallery-thumb {
+      flex: 1;
+      aspect-ratio: 1/1;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: var(--oto-transition);
+      background: #000;
+    }
+    .oto-gallery-thumb.active, .oto-gallery-thumb:hover {
+      border-color: var(--oto-blue);
+      opacity: 1;
+    }
+    .oto-gallery-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Content Area */
+    .oto-showcase-details {
+      margin-top: 24px; /* offset for stock ticker */
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .oto-product-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(245, 158, 11, 0.08) !important;
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      color: var(--oto-gold) !important;
+      font-family: var(--oto-font-head);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+    .oto-product-title {
+      font-family: var(--oto-font-head);
+      font-size: 1.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .oto-product-subtitle {
+      font-size: .8rem;
+      color: var(--oto-text-muted) !important;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .oto-product-desc {
+      font-size: .88rem;
+      color: var(--oto-text-dim) !important;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Price Bar */
+    .oto-price-bar {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--oto-border);
+    }
+    .oto-price-now {
+      font-family: var(--oto-font-head);
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--oto-blue-light) !important;
+    }
+    .oto-price-was {
+      font-size: .95rem;
+      text-decoration: line-through;
+      color: var(--oto-text-muted) !important;
+    }
+    .oto-price-save {
+      background: var(--oto-red);
+      color: #fff !important;
+      font-family: var(--oto-font-head);
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    /* Swatches & Selectors */
+    .oto-selector-row {
+      margin-bottom: 20px;
+    }
+    .oto-selector-label {
+      font-family: var(--oto-font-head);
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--oto-text-dim) !important;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .oto-selector-label span.selected-value {
+      color: var(--oto-text) !important;
+    }
+
+    /* Color Swatches */
+    .oto-color-options {
+      display: flex;
+      gap: 12px;
+    }
+    .oto-color-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 50px;
+      border: 1px solid var(--oto-border);
+      background: rgba(255, 255, 255, 0.02) !important;
+      font-size: .8rem;
+      font-weight: 600;
+      transition: var(--oto-transition);
+      cursor: pointer;
+    }
+    .oto-color-btn:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    .oto-color-btn.active {
+      border-color: var(--oto-blue);
+      background: rgba(59, 130, 246, 0.08) !important;
+      color: var(--oto-blue-light) !important;
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.1);
+    }
+    .oto-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Size Buttons Grid */
+    .oto-size-options {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+    }
+    .oto-size-btn {
+      padding: 10px 0;
+      border: 1px solid var(--oto-border);
+      border-radius: var(--oto-radius-sm);
+      background: rgba(255, 255, 255, 0.02) !important;
+      color: var(--oto-text-dim) !important;
+      font-family: var(--oto-font-body);
+      font-size: .85rem;
+      font-weight: 600;
+      text-align: center;
+      transition: var(--oto-transition);
+      cursor: pointer;
+      position: relative;
+    }
+    .oto-size-btn:hover:not(.disabled) {
+      border-color: rgba(255, 255, 255, 0.3);
+      color: var(--oto-text) !important;
+    }
+    .oto-size-btn.active:not(.disabled) {
+      border-color: var(--oto-blue);
+      background: rgba(59, 130, 246, 0.08) !important;
+      color: var(--oto-blue-light) !important;
+    }
+    .oto-size-btn.disabled {
+      opacity: 0.22;
+      cursor: not-allowed;
+      border-color: transparent !important;
+      text-decoration: line-through;
+    }
+    .oto-size-btn .stock-badge {
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.58rem;
+      background: var(--oto-red);
+      color: #fff !important;
+      padding: 1px 4px;
+      border-radius: 4px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    /* Features List */
+    .oto-features-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+    .oto-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .82rem;
+      color: var(--oto-text-dim) !important;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .oto-features-list li:last-child {
+      border-bottom: none;
+    }
+    .oto-features-list .check {
+      color: var(--oto-green) !important;
+      font-weight: 700;
+      font-size: .95rem;
+    }
+
+    /* ══════════════ VALUE STACK ══════════════ */
+    .oto-value-stack {
+      background: var(--oto-card) !important;
+      border: 1px solid var(--oto-border);
+      border-radius: var(--oto-radius);
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+    .oto-value-title {
+      font-family: var(--oto-font-head);
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--oto-text-muted) !important;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--oto-border);
+      padding-bottom: 12px;
+    }
+    .oto-value-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--oto-font-body);
+      font-size: .88rem;
+      padding: 8px 0;
+    }
+    .oto-value-item span:first-child {
+      color: var(--oto-text-dim) !important;
+    }
+    .oto-value-item .val {
+      color: var(--oto-text-muted) !important;
+      text-decoration: line-through;
+    }
+    .oto-value-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--oto-font-head);
+      font-weight: 800;
+      font-size: 1.1rem;
+      padding-top: 14px;
+      margin-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .oto-value-total span:last-child {
+      color: var(--oto-blue-light) !important;
+    }
+
+    /* ══════════════ ACTION BUTTONS ══════════════ */
+    .oto-actions {
+      text-align: center;
+    }
+    .oto-btn-yes {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #10B981, #059669) !important;
+      color: #FFFFFF !important;
+      font-family: var(--oto-font-head);
+      font-size: 1.1rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      transition: var(--oto-transition);
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+      animation: oto-glow-green 2s ease-in-out infinite;
+    }
+    .oto-btn-yes:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(16, 185, 129, 0.35);
+    }
+    @keyframes oto-glow-green {
+      0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.2); }
+      50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.35); }
+    }
+
+    .oto-btn-no {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: var(--oto-font-body);
+      font-size: .82rem;
+      color: var(--oto-text-muted) !important;
+      text-decoration: underline;
+      transition: var(--oto-transition);
+      cursor: pointer;
+    }
+    .oto-btn-no:hover {
+      color: var(--oto-text-dim) !important;
+    }
+
+    .oto-cta-disclaimer {
+      margin-top: 14px;
+      font-size: .75rem;
+      color: var(--oto-text-muted) !important;
+      line-height: 1.4;
+    }
+
+    /* ══════════════ GUARANTEE ══════════════ */
+    .oto-guarantee {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 600px;
+      margin: 36px auto 0;
+      padding: 18px;
+      background: rgba(16, 185, 129, 0.05) !important;
+      border: 1px solid rgba(16, 185, 129, 0.15);
+      border-radius: var(--oto-radius);
+      font-family: var(--oto-font-body);
+      font-size: .82rem;
+      color: var(--oto-green) !important;
+      text-align: left;
+      line-height: 1.5;
+    }
+    .oto-guarantee svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    /* Social proof ticker */
+    .oto-social-proof {
+      margin-top: 24px;
+      font-size: .8rem;
+      color: var(--oto-text-muted) !important;
+    }
+    .oto-social-proof .dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--oto-green);
+      border-radius: 50%;
+      margin-right: 6px;
+      animation: oto-blink 1.5s infinite;
+    }
+    @keyframes oto-blink {
+      0%, 100% { opacity: 1 }
+      50% { opacity: .3 }
+    }
+
+    /* ══════════════ FOOTER ══════════════ */
+    .oto-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .oto-footer p {
+      font-size: .72rem;
+      color: #52525B !important;
+      margin-bottom: 6px;
+    }
+
+    /* ══════════════ RESPONSIVE ══════════════ */
+    @media (max-width: 768px) {
+      .oto-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 24px;
+      }
+      .oto-gallery-main {
+        aspect-ratio: 4/5;
+        height: auto;
+      }
+      .oto-progress-banner {
+        font-size: .7rem;
+        padding: 6px 14px;
+      }
+      .oto-headline {
+        font-size: 1.8rem;
+      }
+      .oto-subheadline {
+        font-size: .95rem;
+        margin-bottom: 24px;
+      }
+      .oto-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .oto-tab {
+        max-width: 100%;
+        width: 100%;
+        padding: 12px;
+      }
+      .oto-size-options {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══ URGENCY BANNER ═══ -->
+  <div class="oto-urgency">
+    <span>⚠️ Wait! Your Order is NOT Complete. Please Check This Special Offer Below ⚠️</span>
+  </div>
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="oto-header">
+    <a href="#" aria-label="YL2 Home">
+      <img src="https://maxx1.github.io/yl2-sales-funnel/assets/image0.PNG" alt="YL² Logo">
+    </a>
+  </div>
+
+  <!-- ═══ MAIN OTO SECTION ═══ -->
+  <div class="oto-container">
+    
+    <!-- Progress Indicator -->
+    <div class="oto-progress-banner">
+      <span>✅ Hoodie Secured & Reserved</span>
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="oto-headline">
+      Complete The Collection.<br>
+      <span class="highlight">Signature Streetwear.</span>
+    </h1>
+    
+    <p class="oto-subheadline">
+      Your heavyweight premium hoodie has been reserved. Before we ship your order, upgrade your package with these signature drop-exclusive pieces at 40% OFF. This special pricing disappears when you leave.
+    </p>
+
+    <!-- Urgency Timer -->
+    <div class="oto-timer-wrap">
+      <span>This one-time offer expires in:</span>
+      <span class="oto-timer-clock" id="otoTimer">10:00</span>
+    </div>
+
+    <div class="oto-tab-label">Select Your Upgrade Package</div>
+
+    <!-- Product Category Tabs -->
+    <div class="oto-tabs">
+      <button class="oto-tab active" id="tabLongSleeve" onclick="otoSwitchCategory('long_sleeve')">
+        <span class="icon">👕</span>
+        <span>YL² 3D Puff Long Sleeve</span>
+      </button>
+      <button class="oto-tab" id="tabYogaSet" onclick="otoSwitchCategory('yoga_set')">
+        <span class="icon">🧘‍♀️</span>
+        <span>YL² Leopard Yoga Set</span>
+      </button>
+    </div>
+
+    <!-- ══════ INTERACTIVE PRODUCT CARD ══════ -->
+    <div class="oto-card">
+      
+      <!-- Top Scarcity Alert -->
+      <div class="oto-stock-ticker">
+        <span class="pulse-dot"></span>
+        <span class="stock-alert-text" id="otoStockAlert">Low stock: Only 6 Brown Long Sleeves remaining!</span>
+      </div>
+
+      <!-- Left: Interactive Gallery -->
+      <div class="oto-showcase-gallery">
+        <div class="oto-gallery-main">
+          <img id="otoMainImg" src="https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f410c801633505ef93a11.jpg" alt="Product Main View">
+        </div>
+        <div class="oto-gallery-thumbs" id="otoGalleryThumbs">
+          <!-- Dynamically populated thumbnails -->
+        </div>
+      </div>
+
+      <!-- Right: Product Selector Controls -->
+      <div class="oto-showcase-details">
+        
+        <!-- Category Badge -->
+        <span class="oto-product-badge" id="otoProductBadge">Limited Drop Offer</span>
+        
+        <!-- Product Title -->
+        <h2 class="oto-product-title" id="otoProductTitle">YL² 3D Puff Print Long Sleeve</h2>
+        <div class="oto-product-subtitle" id="otoProductSubtitle">Streetwear Essential · Heavyweight Cotton</div>
+        
+        <p class="oto-product-desc" id="otoProductDesc">
+          Heavyweight luxury long sleeve featuring custom 3D Puff Smiley back graphics and high-density chest embroidery. Designed with dropped shoulders for the perfect unisex streetwear silhouette.
+        </p>
+
+        <!-- Pricing Block -->
+        <div class="oto-price-bar">
+          <span class="oto-price-now" id="otoPriceNow">$24.99</span>
+          <span class="oto-price-was" id="otoPriceWas">$39.99</span>
+          <span class="oto-price-save" id="otoPriceSave">Save $15</span>
+        </div>
+
+        <!-- Variant Choice 1: Color Selectors -->
+        <div class="oto-selector-row">
+          <div class="oto-selector-label">
+            <span>Colorway</span>
+            <span class="selected-value" id="selectedColorText">Chocolate Brown</span>
+          </div>
+          <div class="oto-color-options" id="otoColorOptions">
+            <!-- Dynamically populated swatches -->
+          </div>
+        </div>
+
+        <!-- Variant Choice 2: Size Grid -->
+        <div class="oto-selector-row">
+          <div class="oto-selector-label">
+            <span>Size</span>
+            <span class="selected-value" id="selectedSizeText">Select Size</span>
+          </div>
+          <div class="oto-size-options" id="otoSizeOptions">
+            <!-- Dynamically populated size buttons -->
+          </div>
+        </div>
+
+        <!-- Bullet Highlights -->
+        <ul class="oto-features-list" id="otoFeaturesList">
+          <!-- Dynamically populated list -->
+        </ul>
+
+      </div>
+
+    </div>
+
+    <!-- ══════ VALUE STACK ══════ -->
+    <div class="oto-value-stack">
+      <div class="oto-value-title">Package Upgrade Summary</div>
+      <div class="oto-value-item">
+        <span id="stackItemName">YL² 3D Puff Print Long Sleeve</span>
+        <span class="val" id="stackItemVal">$39.99</span>
+      </div>
+      <div class="oto-value-item">
+        <span>VIP Priority shipping insurance</span>
+        <span class="val">$4.99</span>
+      </div>
+      <div class="oto-value-item">
+        <span>One-Time VIP customer discount</span>
+        <span style="color:var(--oto-green) !important; font-weight: 600;">-$15.00</span>
+      </div>
+      <div class="oto-value-total">
+        <span>Your Price Today</span>
+        <span id="stackTotalPrice">$24.99</span>
+      </div>
+    </div>
+
+    <!-- ══════ ACTIONS BLOCK ══════ -->
+    <div class="oto-actions">
+      <!-- YES! One Click Upgrade Link -->
+      <!-- Programmed dynamically below to submit your GHL order add-on link -->
+      <button class="oto-btn-yes" id="yesBtn" onclick="otoSubmitOrder()">
+        Yes! Add To My Order — $24.99 →
+      </button>
+
+      <!-- NO! Thank you link -->
+      <!-- Point this to your GHL Thank You / Next Funnel Step -->
+      <a href="ghl-thankyou.html" class="oto-btn-no" id="noBtn" onclick="otoNoThanks(event)">
+        No thanks, just send my hoodie →
+      </a>
+
+      <div class="oto-cta-disclaimer">
+        🔒 One-Click purchase. Secure checkout. This item will be packaged and shipped together with your hoodie.
+      </div>
+    </div>
+
+    <!-- Guarantee Block -->
+    <div class="oto-guarantee">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span><strong>30-Day Money-Back Guarantee:</strong> Try it out 100% risk-free. If you aren't completely satisfied with the quality, fit, or print, we'll swap it out or issue a prompt refund. No questions asked.</span>
+    </div>
+
+    <!-- Social Proof Activity Ticker -->
+    <div class="oto-social-proof">
+      <span class="dot"></span>
+      <span id="otoViewerCount">43</span> other buyers are looking at this drop right now.
+    </div>
+
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="oto-footer">
+    <p>&copy; 2026 You Live and You Learn Clothing LLC. All rights reserved.</p>
+    <p style="color:#4b5563 !important; font-size:.65rem;">
+      *One-time offer only. Exiting this page forfeits eligibility for discounted product drop bundles.
+    </p>
+  </div>
+
+  <!-- ══════════════ JAVASCRIPT MASTER LOGIC ══════════════ -->
+  <script>
+    // ══════ REAL REMAINING INVENTORY DATABASE (From PDF Sheet) ══════
+    const INVENTORY = {
+      long_sleeve: {
+        name: "YL² 3D Puff Print Long Sleeve",
+        badge: "🔥 Drops Only — Unisex Cut",
+        price: 24.99,
+        wasPrice: 39.99,
+        desc: "Heavyweight luxury streetwear long sleeve. Crafted from double-brushed premium heavyweight cotton, boasting our unique 3D puffed Smiley back print and dense embroidered chest logo. Same ultra-premium texture as your hoodie.",
+        bullets: [
+          "✓ Thick 3D Puff dripping smiley back print",
+          "✓ Precision embroidered YL² chest logo",
+          "✓ Heavyweight 100% Cotton construction",
+          "✓ Ribbed cuffs & loose streetwear drape",
+          "✓ Bundled with free priority order routing"
+        ],
+        variants: [
+          {
+            color: "Chocolate Brown",
+            swatchColor: "#3e2723",
+            stock: {
+              "Small": 1,
+              "Medium": 1,
+              "XL": 2,
+              "XXL": 2
+            },
+            images: [
+              "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f410c801633505ef93a11.jpg",
+              "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f410c3c3b60d82315896c.jpg"
+            ]
+          },
+          {
+            color: "Drippy Orange",
+            swatchColor: "#e65100",
+            stock: {
+              "Small": 1,
+              "Medium": 1,
+              "XL": 5
+            },
+            images: [
+              "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f40fa6b8ea8a8274196f4.jpg",
+              "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f40fce05851175c2f06a9.jpg"
+            ]
+          }
+        ]
+      },
+      yoga_set: {
+        name: "YL² '50 Shades' Leopard Yoga Set",
+        badge: "🧘‍♀️ Limited Activewear Drop",
+        price: 24.99,
+        wasPrice: 39.99,
+        desc: "High-performance compression 2-piece set. Features double-cross strappy sports bra and high-waisted, butt-lifting active biker shorts in our signature YL² Leopard print. Confidence-boosting shapewear fit.",
+        bullets: [
+          "✓ Double-cross back support sports bra",
+          "✓ High-waisted anti-roll compression shorts",
+          "✓ 100% Squat-proof ultra-thick blend",
+          "✓ Sweat-wicking 4-way stretch fabric",
+          "✓ Signature YL² Leopard artwork drop"
+        ],
+        variants: [
+          {
+            color: "Desert Stone",
+            swatchColor: "#a1887f",
+            stock: {
+              "Small": 2,
+              "Medium": 4,
+              "Large": 1
+            },
+            images: [
+              "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f4139801633505ef93e3d.jpg",
+              "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f4107801633505ef9399b.jpg"
+            ]
+          },
+          {
+            color: "Icy Blue",
+            swatchColor: "#90caf9",
+            stock: {
+              "Small": 1,
+              "Large": 1
+            },
+            images: [
+              "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f41623c3b60d82315910c.jpg",
+              "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f4161ca9579c76bbc293c.jpg"
+            ]
+          }
+        ]
+      }
+    };
+
+    // ══════ STATE CONTROLLERS ══════
+    let currentCategory = 'long_sleeve';
+    let currentColor = '';
+    let currentSize = '';
+    let currentImageIndex = 0;
+
+    // GHL Configuration: Define URLs for your specific GHL products here
+    // In GHL, create separate Products (e.g. OTO Brown L) and grab their direct upsell link or product IDs.
+    const GHL_PRODUCT_MAPPING = {
+      'long_sleeve': {
+        'Chocolate Brown': {
+          'Small': '#trigger-upsell-6a0f4a20e9b8a8732781bd8d',
+          'Medium': '#trigger-upsell-6a0f4a2ef11c4ed799846c64',
+          'XL': '#trigger-upsell-6a0f4a3f8aebed10bc1aeb55',
+          'XXL': '#trigger-upsell-6a0f4a4d5efe746b54f7c85d'
+        },
+        'Drippy Orange': {
+          'Small': '#trigger-upsell-6a0f4a5f74c58d20625e83d4',
+          'Medium': '#trigger-upsell-6a0f4a6a7a22e9ef95adf53e',
+          'XL': '#trigger-upsell-6a0f4a77f11c4eae05846cd7'
+        }
+      },
+      'yoga_set': {
+        'Desert Stone': {
+          'Small': '#trigger-upsell-6a0f4a91c7f0a309084002f1',
+          'Medium': '#trigger-upsell-6a0f4a9eff6b3156b5fd4702',
+          'Large': '#trigger-upsell-6a0f4aadd004a899329ee94a'
+        },
+        'Icy Blue': {
+          'Small': '#trigger-upsell-6a0f4a91c7f0a309084002f1',
+          'Large': '#trigger-upsell-6a0f4aadd004a899329ee94a'
+        }
+      }
+    };
+
+    // ══════ INITIALIZATION ══════
+    document.addEventListener("DOMContentLoaded", function() {
+      // Start OTO timer
+      startOTOTimer(10 * 60); // 10 minutes
+
+      // Set viewer count updates
+      initViewers();
+
+      // Render default category
+      renderProduct(currentCategory);
+    });
+
+    // ══════ TIMER CONTROLLER ══════
+    function startOTOTimer(duration) {
+      let timer = duration, minutes, seconds;
+      const display = document.getElementById('otoTimer');
+      
+      // Persist timer across accidental reloads
+      const storedTime = localStorage.getItem('yl2_oto_expiration');
+      if (storedTime) {
+        timer = Math.max(0, Math.floor((parseInt(storedTime) - Date.now()) / 1000));
+        if (timer <= 0) {
+          localStorage.removeItem('yl2_oto_expiration');
+          timer = duration;
+          localStorage.setItem('yl2_oto_expiration', Date.now() + duration * 1000);
+        }
+      } else {
+        localStorage.setItem('yl2_oto_expiration', Date.now() + duration * 1000);
+      }
+
+      const interval = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          clearInterval(interval);
+          display.textContent = "00:00";
+          display.style.setProperty('animation', 'oto-flash 1s ease-in-out infinite', 'important');
+        }
+      }, 1000);
+    }
+
+    // ══════ ACTIVITY TICKER ══════
+    function initViewers() {
+      const el = document.getElementById('otoViewerCount');
+      setInterval(function() {
+        // Humanized dynamic viewership shifts
+        const val = 35 + Math.floor(Math.random() * 20);
+        el.textContent = val;
+      }, 6000);
+    }
+
+    // ══════ SWITCH CATEGORY (TABS) ══════
+    window.otoSwitchCategory = function(cat) {
+      currentCategory = cat;
+      
+      // Update Tab CSS
+      document.getElementById('tabLongSleeve').classList.toggle('active', cat === 'long_sleeve');
+      document.getElementById('tabYogaSet').classList.toggle('active', cat === 'yoga_set');
+
+      // Update Render
+      renderProduct(cat);
+    };
+
+    // ══════ CORE RENDER ENGINE ══════
+    function renderProduct(catId) {
+      const product = INVENTORY[catId];
+      
+      // Render Static texts
+      document.getElementById('otoProductTitle').textContent = product.name;
+      document.getElementById('otoProductBadge').textContent = product.badge;
+      document.getElementById('otoProductDesc').textContent = product.desc;
+      document.getElementById('stackItemName').textContent = product.name;
+
+      const formattedPrice = `$${product.price.toFixed(2)}`;
+      const formattedWas = `$${product.wasPrice.toFixed(2)}`;
+      const savePrice = product.wasPrice - product.price;
+
+      document.getElementById('otoPriceNow').textContent = formattedPrice;
+      document.getElementById('otoPriceWas').textContent = formattedWas;
+      document.getElementById('otoPriceSave').textContent = `Save $${savePrice.toFixed(0)}`;
+      document.getElementById('stackItemVal').textContent = formattedWas;
+      document.getElementById('stackTotalPrice').textContent = formattedPrice;
+
+      // Update CTA Action YesBtn Label
+      updateSubmitButtonText();
+
+      // Render Features
+      const featList = document.getElementById('otoFeaturesList');
+      featList.innerHTML = '';
+      product.bullets.forEach(b => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="check">✓</span> ${b.replace('✓', '').trim()}`;
+        featList.appendChild(li);
+      });
+
+      // Default Select first variant
+      const firstVariant = product.variants[0];
+      currentColor = firstVariant.color;
+      currentSize = ''; // force user size selection
+      
+      // Render Color Swatches
+      const colorOpts = document.getElementById('otoColorOptions');
+      colorOpts.innerHTML = '';
+      product.variants.forEach((v, index) => {
+        const btn = document.createElement('button');
+        btn.className = `oto-color-btn ${v.color === currentColor ? 'active' : ''}`;
+        btn.onclick = () => selectColor(v.color);
+        btn.innerHTML = `
+          <span class="oto-swatch" style="background:${v.swatchColor};"></span>
+          <span>${v.color}</span>
+        `;
+        colorOpts.appendChild(btn);
+      });
+      document.getElementById('selectedColorText').textContent = currentColor;
+
+      // Render Sizes and Images for first variant
+      renderSizesAndImages(firstVariant);
+    }
+
+    // ══════ INTERACTIVE COLOR SELECTOR ══════
+    function selectColor(colorName) {
+      currentColor = colorName;
+      document.getElementById('selectedColorText').textContent = colorName;
+      currentSize = ''; // reset size selection on color change
+      document.getElementById('selectedSizeText').textContent = 'Select Size';
+
+      // Update Swatches Active state
+      const buttons = document.querySelectorAll('#otoColorOptions button');
+      buttons.forEach(btn => {
+        btn.classList.toggle('active', btn.textContent.trim() === colorName);
+      });
+
+      // Grab current variant details
+      const variant = INVENTORY[currentCategory].variants.find(v => v.color === colorName);
+      renderSizesAndImages(variant);
+      updateSubmitButtonText();
+    }
+
+    // ══════ RENDER DYNAMIC SIZES & PHOTO GALLERY ══════
+    function renderSizesAndImages(variant) {
+      // 1. Gallery images
+      const images = variant.images;
+      currentImageIndex = 0;
+      
+      // Main image
+      const mainImg = document.getElementById('otoMainImg');
+      mainImg.src = images[0];
+      
+      // Thumbnails
+      const thumbsWrap = document.getElementById('otoGalleryThumbs');
+      thumbsWrap.innerHTML = '';
+      images.forEach((img, idx) => {
+        const thumb = document.createElement('button');
+        thumb.className = `oto-gallery-thumb ${idx === 0 ? 'active' : ''}`;
+        thumb.onclick = () => {
+          mainImg.src = img;
+          currentImageIndex = idx;
+          document.querySelectorAll('#otoGalleryThumbs button').forEach((t, i) => {
+            t.classList.toggle('active', i === idx);
+          });
+        };
+        thumb.innerHTML = `<img src="${img}" alt="Thumbnail View">`;
+        thumbsWrap.appendChild(thumb);
+      });
+
+      // 2. Sizes selection with dynamic stock feedback
+      const sizes = ['Small', 'Medium', 'Large', 'XL', 'XXL'];
+      const sizeOpts = document.getElementById('otoSizeOptions');
+      sizeOpts.innerHTML = '';
+
+      let totalColorStock = 0;
+
+      sizes.forEach(sz => {
+        const stockQty = variant.stock[sz] || 0;
+        totalColorStock += stockQty;
+
+        const btn = document.createElement('button');
+        btn.className = 'oto-size-btn';
+        btn.textContent = sz;
+
+        if (stockQty === 0) {
+          btn.classList.add('disabled');
+        } else {
+          // Click handler for valid size selection
+          btn.onclick = () => selectSize(sz);
+          
+          // Render visual badge for scarce items (<= 2 pieces remaining)
+          if (stockQty <= 2) {
+            const badge = document.createElement('span');
+            badge.className = 'stock-badge';
+            badge.textContent = `Only ${stockQty} left`;
+            btn.appendChild(badge);
+          }
+        }
+        
+        sizeOpts.appendChild(btn);
+      });
+
+      // Update header stock ticker details
+      const alertLabel = document.getElementById('otoStockAlert');
+      if (totalColorStock <= 3) {
+        alertLabel.innerHTML = `⚠️ <strong style="color:var(--oto-red-light);">URGENT:</strong> Only ${totalColorStock} remaining in this colorway!`;
+      } else {
+        alertLabel.innerHTML = `🔥 High demand: ${totalColorStock} pieces in stock. Reserve yours before checkout completes!`;
+      }
+    }
+
+    // ══════ INTERACTIVE SIZE SELECTOR ══════
+    function selectSize(szName) {
+      currentSize = szName;
+      document.getElementById('selectedSizeText').textContent = szName;
+
+      // Update CSS classes
+      const buttons = document.querySelectorAll('#otoSizeOptions button');
+      buttons.forEach(btn => {
+        if (!btn.classList.contains('disabled')) {
+          btn.classList.toggle('active', btn.textContent.replace('Only 1 left', '').replace('Only 2 left', '').trim() === szName);
+        }
+      });
+
+      updateSubmitButtonText();
+    }
+
+    // ══════ SUBMIT ACTION DYNAMIC LABELS ══════
+    function updateSubmitButtonText() {
+      const yesBtn = document.getElementById('yesBtn');
+      const product = INVENTORY[currentCategory];
+      const pStr = `$${product.price.toFixed(2)}`;
+
+      if (!currentSize) {
+        yesBtn.textContent = `Select Size — ${pStr} →`;
+        yesBtn.style.opacity = '0.85';
+      } else {
+        yesBtn.textContent = `Yes! Add ${currentColor} (${currentSize}) — ${pStr} →`;
+        yesBtn.style.opacity = '1';
+      }
+    }
+
+    // ══════ SUBMIT GHL ORDER ══════
+    window.otoSubmitOrder = function() {
+      if (!currentSize) {
+        // Shake size selection to alert user
+        const sizeArea = document.getElementById('otoSizeOptions');
+        sizeArea.style.setProperty('animation', 'oto-shake 0.4s ease', 'important');
+        setTimeout(() => sizeArea.style.removeProperty('animation'), 400);
+        
+        document.getElementById('selectedSizeText').innerHTML = `<span style="color:var(--oto-red-light);">Please select a size!</span>`;
+        return;
+      }
+
+      // Persist selections for the Thank You page visual receipt
+      try {
+        localStorage.setItem('yl2_oto_upgraded', 'true');
+        localStorage.setItem('yl2_oto_category', currentCategory);
+        localStorage.setItem('yl2_oto_color', currentColor);
+        localStorage.setItem('yl2_oto_size', currentSize);
+      } catch(err) {
+        console.error('Failed to cache OTO upgrades:', err);
+      }
+
+      // Grab mapped GHL checkout link
+      const mapCat = GHL_PRODUCT_MAPPING[currentCategory];
+      const mapCol = mapCat ? mapCat[currentColor] : null;
+      let finalLink = mapCol ? mapCol[currentSize] : null;
+
+      if (!finalLink) {
+        // Fallback or preview
+        finalLink = `#ghl-upsell-submit?cat=${currentCategory}&color=${currentColor}&size=${currentSize}`;
+      }
+
+      console.log(`[YL2 OTO] One-click upgrade clicked: ${currentCategory} | ${currentColor} | ${currentSize}`);
+      console.log(`[YL2 OTO] Redirecting to GHL upsell link: ${finalLink}`);
+
+      // GHL Native: If this is pasted inside an HTML element, we can trigger GHL's native link redirect,
+      // or directly use location.href to fire GHL's native one-click upsell handler.
+      // E.g., if GHL handles this via custom links, GHL automatically processes the upsell!
+      window.location.href = finalLink;
+    };
+
+    // ══════ NO THANKS ACTION ══════
+    window.otoNoThanks = function(event) {
+      // Persist selections for the Thank You page visual receipt
+      try {
+        localStorage.setItem('yl2_oto_upgraded', 'false');
+      } catch(err) {
+        console.error('Failed to cache OTO denial:', err);
+      }
+      console.log('[YL2 OTO] User declined the offer.');
+    };
+  </script>
+
+  <!-- Shake Animation Styles for missing size validation -->
+  <style>
+    @keyframes oto-shake {
+      0%, 100% { transform: translateX(0); }
+      20%, 60% { transform: translateX(-6px); }
+      40%, 80% { transform: translateX(6px); }
+    }
+  </style>
+
+</body>
+</html>

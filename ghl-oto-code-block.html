@@ -1,0 +1,476 @@
+<!-- ═══════════════════════════════════════════════════════
+     YL² OTO UPSELL — CODE BLOCK (paste into GHL Code element)
+     Contains: CSS, header, upsell offer content, product showcase
+     GHL Buttons for "Yes/No" go BELOW this code block
+     ═══════════════════════════════════════════════════════ -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+/* GHL NUCLEAR OVERRIDE */
+html, body, main, article, aside,
+[class*="hl_"], [class*="hl-"],
+[id*="section"], [id*="row"], [id*="preview"], [id*="page"] {
+  background-color: #0a0a0a !important;
+  color: #FFFFFF !important;
+}
+[class*="hl_"], [class*="hl-"], [class*="inner-section"],
+[class*="full-section"], [class*="container-fluid"] {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+:root {
+  --oto-bg: #0a0a0a;
+  --oto-card: #141414;
+  --oto-blue: #3B82F6;
+  --oto-blue-light: #60A5FA;
+  --oto-blue-glow: rgba(59,130,246,.25);
+  --oto-red: #EF4444;
+  --oto-green: #10B981;
+  --oto-gold: #F59E0B;
+  --oto-text: #FFFFFF;
+  --oto-text-dim: #A1A1AA;
+  --oto-text-muted: #71717A;
+  --oto-border: rgba(255,255,255,.08);
+  --oto-glass: rgba(255,255,255,.04);
+  --oto-radius: 12px;
+  --oto-font-head: 'Outfit', sans-serif;
+  --oto-font-body: 'Inter', sans-serif;
+  --oto-transition: .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* ══════════════ URGENCY BAR ══════════════ */
+.oto-urgency {
+  background: linear-gradient(90deg, #EF4444, #DC2626) !important;
+  padding: 12px 16px;
+  text-align: center;
+  font-family: var(--oto-font-body);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #fff !important;
+  line-height: 1.4;
+}
+.oto-urgency span { animation: oto-flash 1.5s ease-in-out infinite; }
+@keyframes oto-flash { 0%,100%{opacity:1} 50%{opacity:.6} }
+
+/* ══════════════ HEADER ══════════════ */
+.oto-header {
+  background: var(--oto-bg) !important;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--oto-border);
+}
+.oto-header img { height: 32px; filter: invert(1); }
+
+/* ══════════════ MAIN CONTAINER ══════════════ */
+.oto-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 24px 20px;
+  background: var(--oto-bg) !important;
+  text-align: center;
+}
+
+/* ══════════════ WAIT BADGE ══════════════ */
+.oto-wait-badge {
+  display: inline-block;
+  background: rgba(239,68,68,.12);
+  border: 1px solid rgba(239,68,68,.3);
+  border-radius: 50px;
+  padding: 8px 24px;
+  font-family: var(--oto-font-head);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--oto-red) !important;
+  margin-bottom: 20px;
+  animation: oto-badge-pulse 2s ease-in-out infinite;
+}
+@keyframes oto-badge-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,.2); }
+  50% { box-shadow: 0 0 0 8px rgba(239,68,68,0); }
+}
+
+/* ══════════════ HEADLINE ══════════════ */
+.oto-headline {
+  font-family: var(--oto-font-head);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: var(--oto-text) !important;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  letter-spacing: -.02em;
+}
+.oto-headline .highlight {
+  background: linear-gradient(135deg, var(--oto-blue-light), var(--oto-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.oto-subheadline {
+  font-family: var(--oto-font-body);
+  font-size: 1.05rem;
+  color: var(--oto-text-dim) !important;
+  max-width: 600px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+/* ══════════════ TIMER ══════════════ */
+.oto-timer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+  font-family: var(--oto-font-body);
+  font-size: .85rem;
+  color: var(--oto-text-dim) !important;
+}
+.oto-timer-clock {
+  font-family: var(--oto-font-head);
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--oto-red) !important;
+  background: rgba(239,68,68,.1);
+  border: 1px solid rgba(239,68,68,.2);
+  border-radius: 8px;
+  padding: 6px 14px;
+}
+
+/* ══════════════ PRODUCT SHOWCASE ══════════════ */
+.oto-product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 36px;
+  text-align: left;
+}
+.oto-product-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.oto-product-images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--oto-radius);
+  border: 1px solid var(--oto-border);
+  transition: var(--oto-transition);
+}
+.oto-product-images img:first-child {
+  grid-column: span 2;
+  height: 280px;
+}
+.oto-product-images img:hover { opacity: .85; transform: scale(1.02); }
+
+.oto-product-info { padding: 8px 0; }
+.oto-product-tag {
+  font-family: var(--oto-font-head);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--oto-gold) !important;
+  margin-bottom: 10px;
+}
+.oto-product-title {
+  font-family: var(--oto-font-head);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--oto-text) !important;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+.oto-product-desc {
+  font-family: var(--oto-font-body);
+  font-size: .9rem;
+  color: var(--oto-text-dim) !important;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Price */
+.oto-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.oto-price-current {
+  font-family: var(--oto-font-head);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--oto-blue-light) !important;
+}
+.oto-price-original {
+  font-size: 1rem;
+  color: var(--oto-text-muted) !important;
+  text-decoration: line-through;
+}
+.oto-price-save {
+  background: var(--oto-red);
+  color: #fff !important;
+  font-family: var(--oto-font-head);
+  font-size: .65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+/* Includes list */
+.oto-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.oto-includes li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--oto-font-body);
+  font-size: .85rem;
+  color: var(--oto-text-dim) !important;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.oto-includes li:last-child { border-bottom: none; }
+.oto-includes .check {
+  color: var(--oto-green) !important;
+  font-weight: 700;
+  font-size: .9rem;
+  flex-shrink: 0;
+}
+
+/* ══════════════ VALUE STACK ══════════════ */
+.oto-value-stack {
+  background: var(--oto-card) !important;
+  border: 1px solid var(--oto-border);
+  border-radius: var(--oto-radius);
+  padding: 28px;
+  margin-bottom: 36px;
+  text-align: left;
+}
+.oto-value-title {
+  font-family: var(--oto-font-head);
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--oto-text-muted) !important;
+  margin-bottom: 16px;
+}
+.oto-value-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--oto-font-body);
+  font-size: .88rem;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.oto-value-item:last-child { border-bottom: none; }
+.oto-value-item span:first-child { color: var(--oto-text-dim) !important; }
+.oto-value-item .val {
+  color: var(--oto-text-muted) !important;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+.oto-value-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--oto-font-head);
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding-top: 14px;
+  margin-top: 8px;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.oto-value-total span:last-child { color: var(--oto-blue-light) !important; }
+
+/* ══════════════ CTA AREA ══════════════ */
+.oto-cta-section {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.oto-cta-note {
+  font-family: var(--oto-font-body);
+  font-size: .78rem;
+  color: var(--oto-text-muted) !important;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+/* Style GHL buttons */
+.oto-container button,
+.oto-container a.btn,
+.oto-container [class*="btn"] {
+  font-family: var(--oto-font-head) !important;
+}
+
+/* ══════════════ GUARANTEE ══════════════ */
+.oto-guarantee {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 500px;
+  margin: 28px auto 0;
+  padding: 18px;
+  background: rgba(16,185,129,.06) !important;
+  border: 1px solid rgba(16,185,129,.15);
+  border-radius: var(--oto-radius);
+  font-family: var(--oto-font-body);
+  font-size: .82rem;
+  color: var(--oto-green) !important;
+  text-align: left;
+  line-height: 1.5;
+}
+.oto-guarantee svg { width: 28px; height: 28px; flex-shrink: 0; }
+
+/* ══════════════ FOOTER ══════════════ */
+.oto-footer {
+  background: var(--oto-bg) !important;
+  border-top: 1px solid rgba(255,255,255,.06);
+  padding: 28px 24px;
+  text-align: center;
+  margin-top: 48px;
+}
+.oto-footer p {
+  font-family: var(--oto-font-body);
+  font-size: .72rem;
+  color: #52525B !important;
+  margin-bottom: 4px;
+}
+
+/* ══════════════ RESPONSIVE ══════════════ */
+@media (max-width: 768px) {
+  .oto-container { padding: 32px 16px 20px; }
+  .oto-product-grid { grid-template-columns: 1fr; gap: 20px; }
+  .oto-product-images img:first-child { height: 220px; }
+  .oto-product-images img { height: 160px; }
+  .oto-headline { font-size: 1.6rem; }
+}
+</style>
+
+
+<!-- ═══ URGENCY BAR ═══ -->
+<div class="oto-urgency">
+  <span>⚠️ WAIT — YOUR ORDER IS NOT COMPLETE! ONE-TIME OFFER BELOW ⚠️</span>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<div class="oto-header">
+  <a href="#" aria-label="YL2 Home">
+    <img src="https://maxx1.github.io/yl2-sales-funnel/assets/image0.PNG" alt="YL² Logo">
+  </a>
+</div>
+
+<!-- ═══ MAIN CONTENT ═══ -->
+<div class="oto-container">
+
+  <!-- Wait badge -->
+  <div class="oto-wait-badge">⚡ One-Time Exclusive Offer</div>
+
+  <!-- Headline -->
+  <h1 class="oto-headline">
+    Complete Your Collection.<br>
+    <span class="highlight">The Digital Drop.</span>
+  </h1>
+  <p class="oto-subheadline">
+    You just secured the hoodie. Now unlock the full YL² digital collection, designs you can't get anywhere else, at a price that only exists right now.
+  </p>
+
+  <!-- Timer -->
+  <div class="oto-timer-wrap">
+    <span>This offer disappears in</span>
+    <span class="oto-timer-clock" id="otoTimer">10:00</span>
+  </div>
+
+  <!-- Product Showcase -->
+  <div class="oto-product-grid">
+
+    <!-- Left: Images -->
+    <div class="oto-product-images">
+      <img src="https://maxx1.github.io/yl2-sales-funnel/assets/DSC07423-2_Original.jpg" alt="YL² Digital Collection Preview">
+      <img src="https://maxx1.github.io/yl2-sales-funnel/assets/DSC07423-2_Original.jpg" alt="Digital Design 1">
+      <img src="https://maxx1.github.io/yl2-sales-funnel/assets/DSC07423-2_Original.jpg" alt="Digital Design 2">
+    </div>
+
+    <!-- Right: Info -->
+    <div class="oto-product-info">
+      <div class="oto-product-tag">🔥 Buyers Only — One Time</div>
+      <h2 class="oto-product-title">YL² Digital Collection</h2>
+      <p class="oto-product-desc">
+        Exclusive digital designs, wallpapers, and brand assets from the YL² launch series. Perfect for reppping the brand across all your devices. This collection won't be sold separately.
+      </p>
+
+      <!-- Price -->
+      <div class="oto-price-row">
+        <span class="oto-price-current">$9.99</span>
+        <span class="oto-price-original">$24.99</span>
+        <span class="oto-price-save">Save 60%</span>
+      </div>
+
+      <!-- What's included -->
+      <ul class="oto-includes">
+        <li><span class="check">✓</span> 10 Exclusive Digital Wallpapers</li>
+        <li><span class="check">✓</span> YL² Brand Asset Pack</li>
+        <li><span class="check">✓</span> Behind-the-Design Video</li>
+        <li><span class="check">✓</span> Early Access to Future Drops</li>
+        <li><span class="check">✓</span> Instant Digital Delivery</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Value Stack -->
+  <div class="oto-value-stack">
+    <div class="oto-value-title">Here's Everything You're Getting</div>
+    <div class="oto-value-item">
+      <span>10 Exclusive Digital Wallpapers</span>
+      <span class="val">$14.99</span>
+    </div>
+    <div class="oto-value-item">
+      <span>YL² Brand Asset Pack</span>
+      <span class="val">$9.99</span>
+    </div>
+    <div class="oto-value-item">
+      <span>Behind-the-Design Video</span>
+      <span class="val">$4.99</span>
+    </div>
+    <div class="oto-value-item">
+      <span>Early Access to Future Drops</span>
+      <span class="val">Priceless</span>
+    </div>
+    <div class="oto-value-total">
+      <span>Your Price Today</span>
+      <span>Just $9.99</span>
+    </div>
+  </div>
+
+  <!-- CTA NOTE (GHL Yes/No buttons go directly AFTER this code block) -->
+  <div class="oto-cta-section">
+    <p style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;color:#fff !important;margin-bottom:8px;">
+      Add the Digital Collection to your order?
+    </p>
+    <p style="font-family:'Inter',sans-serif;font-size:.85rem;color:#A1A1AA !important;">
+      This is added to your existing order. No re-entering payment info.
+    </p>
+  </div>
+
+  <!-- ⚠️ GHL "YES" BUTTON AND "NO THANKS" BUTTON GO BELOW THIS ⚠️ -->
+
+</div>

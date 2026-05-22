@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to the Family — YL²</title>
+  <link rel="icon" href="https://maxx1.github.io/yl2-sales-funnel/assets/image0.PNG">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ═══════════════════════════════════════════════════════
+       YL² THANK YOU — STREETWEAR PREMIUM DESIGN SYSTEM
+       Locks colors, cards, and buttons to match checkout.html & OTO
+       ═══════════════════════════════════════════════════════ */
+    html, body, main, article, aside,
+    [class*="hl_"], [class*="hl-"],
+    [id*="section"], [id*="row"], [id*="preview"], [id*="page"] {
+      background-color: #0a0a0a !important;
+      color: #FFFFFF !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+
+    [class*="hl_"], [class*="hl-"], [class*="inner-section"],
+    [class*="full-section"], [class*="container-fluid"] {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      margin: 0 !important;
+    }
+
+    :root {
+      --ty-bg: #0a0a0a;
+      --ty-card: #141414;
+      --ty-card-hover: #1a1a1a;
+      --ty-blue: #3B82F6;
+      --ty-blue-light: #60A5FA;
+      --ty-blue-glow: rgba(59, 130, 246, 0.25);
+      --ty-red: #EF4444;
+      --ty-red-light: #F87171;
+      --ty-green: #10B981;
+      --ty-green-glow: rgba(16, 185, 129, 0.2);
+      --ty-gold: #F59E0B;
+      --ty-text: #FFFFFF;
+      --ty-text-dim: #A1A1AA;
+      --ty-text-muted: #71717A;
+      --ty-border: rgba(255, 255, 255, 0.08);
+      --ty-radius: 12px;
+      --ty-radius-sm: 8px;
+      --ty-font-head: 'Outfit', sans-serif;
+      --ty-font-body: 'Inter', sans-serif;
+      --ty-transition: .3s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    /* Reset & Utilities */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--ty-bg);
+      color: var(--ty-text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: inherit;
+    }
+
+    /* ══════════════ ANNOUNCEMENT BAR ══════════════ */
+    .ty-announce {
+      background: linear-gradient(90deg, var(--ty-blue), #2563EB) !important;
+      padding: 12px 16px;
+      text-align: center;
+      font-family: var(--ty-font-body);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #fff !important;
+      z-index: 999;
+    }
+    .ty-announce span {
+      animation: ty-pulse-txt 2s ease-in-out infinite;
+    }
+    @keyframes ty-pulse-txt {
+      0%, 100% { opacity: 1 }
+      50% { opacity: .75 }
+    }
+
+    /* ══════════════ HEADER ══════════════ */
+    .ty-header {
+      background: var(--ty-bg) !important;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-bottom: 1px solid var(--ty-border);
+    }
+    .ty-header img {
+      height: 32px;
+      filter: invert(1);
+    }
+    .ty-secure-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .78rem;
+      color: var(--ty-text-muted) !important;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    .ty-secure-badge svg {
+      width: 14px;
+      height: 14px;
+      color: var(--ty-green);
+    }
+
+    /* ══════════════ MAIN WORKSPACE ══════════════ */
+    .ty-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* Splash Area */
+    .ty-splash {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .ty-check-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.1) !important;
+      border: 2px solid var(--ty-green);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: var(--ty-green);
+      margin-bottom: 24px;
+      box-shadow: 0 0 25px var(--ty-green-glow);
+      animation: ty-scale-up .6s cubic-bezier(.34, 1.56, 0.64, 1);
+    }
+    @keyframes ty-scale-up {
+      0% { transform: scale(0.6); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    
+    .ty-title {
+      font-family: var(--ty-font-head);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -.02em;
+    }
+    .ty-title .highlight {
+      background: linear-gradient(135deg, var(--ty-blue-light), var(--ty-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .ty-subtitle {
+      font-family: var(--ty-font-body);
+      font-size: 1.05rem;
+      color: var(--ty-text-dim) !important;
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ══════════════ GRID WORKSPACE ══════════════ */
+    .ty-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* Left Side: Order details & copped items */
+    .ty-left-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Header for copped list */
+    .ty-section-header {
+      font-family: var(--ty-font-head);
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--ty-text) !important;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .ty-section-header span.badge {
+      font-size: .68rem;
+      background: rgba(59, 130, 246, 0.12) !important;
+      color: var(--ty-blue-light) !important;
+      padding: 4px 10px;
+      border-radius: 50px;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    /* Visual Product Card */
+    .ty-item-card {
+      background: var(--ty-card) !important;
+      border: 1px solid var(--ty-border);
+      border-radius: var(--ty-radius);
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      transition: var(--ty-transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .ty-item-card:hover {
+      border-color: rgba(59, 130, 246, 0.2);
+      transform: translateY(-2px);
+    }
+    .ty-item-img {
+      width: 90px;
+      height: 110px;
+      border-radius: var(--ty-radius-sm);
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #000;
+      border: 1px solid var(--ty-border);
+      position: relative;
+    }
+    .ty-item-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--ty-transition);
+    }
+    /* Hover Reveal Back of Hoodie */
+    .ty-item-card:hover .ty-item-img img.front {
+      opacity: 0;
+    }
+    .ty-item-card:hover .ty-item-img img.back {
+      opacity: 1;
+    }
+    .ty-item-img img.back {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+    }
+
+    .ty-item-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .ty-item-name {
+      font-family: var(--ty-font-head);
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--ty-text) !important;
+      line-height: 1.3;
+    }
+    .ty-item-meta {
+      font-size: .8rem;
+      color: var(--ty-text-dim) !important;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .ty-item-meta span {
+      background: rgba(255, 255, 255, 0.04) !important;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .ty-item-price {
+      font-family: var(--ty-font-head);
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--ty-blue-light) !important;
+      align-self: flex-end;
+    }
+
+    /* ══════════════ RECEIPT STACK ══════════════ */
+    .ty-receipt {
+      background: var(--ty-card) !important;
+      border: 1px solid var(--ty-border);
+      border-radius: var(--ty-radius);
+      padding: 24px;
+    }
+    .ty-receipt-title {
+      font-family: var(--ty-font-head);
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--ty-text-muted) !important;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--ty-border);
+      padding-bottom: 12px;
+    }
+    .ty-receipt-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--ty-font-body);
+      font-size: .88rem;
+      padding: 8px 0;
+    }
+    .ty-receipt-line span:first-child {
+      color: var(--ty-text-dim) !important;
+    }
+    .ty-receipt-line span:last-child {
+      color: var(--ty-text) !important;
+      font-weight: 600;
+    }
+    .ty-receipt-line .green {
+      color: var(--ty-green) !important;
+    }
+    .ty-receipt-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--ty-font-head);
+      font-weight: 900;
+      font-size: 1.25rem;
+      padding-top: 16px;
+      margin-top: 8px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ty-receipt-total span:last-child {
+      color: var(--ty-blue-light) !important;
+    }
+
+    /* Right Side: Tracker and referral */
+    .ty-right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* ══════════════ PREMIUM TRACKING STATUS ══════════════ */
+    .ty-tracker {
+      background: var(--ty-card) !important;
+      border: 1px solid var(--ty-border);
+      border-radius: var(--ty-radius);
+      padding: 28px;
+    }
+    .ty-tracker-title {
+      font-family: var(--ty-font-head);
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ty-tracker-badge {
+      font-size: .68rem;
+      background: rgba(16, 185, 129, 0.08) !important;
+      color: var(--ty-green) !important;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 50px;
+      padding: 4px 12px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      font-weight: 700;
+      animation: ty-pulse-border 2s infinite;
+    }
+    @keyframes ty-pulse-border {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.2); }
+      50% { box-shadow: 0 0 8px rgba(16, 185, 129, 0.4); }
+    }
+
+    /* Step Timeline */
+    .ty-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+    }
+    .ty-steps::before {
+      content: '';
+      position: absolute;
+      left: 17px;
+      top: 12px;
+      bottom: 12px;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.05);
+      z-index: 1;
+    }
+    .ty-step {
+      display: flex;
+      gap: 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .ty-step-ring {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #141414 !important;
+      border: 2px solid var(--ty-text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--ty-text-muted) !important;
+      flex-shrink: 0;
+      transition: var(--ty-transition);
+    }
+    
+    /* Finished State */
+    .ty-step.finished .ty-step-ring {
+      background: var(--ty-green) !important;
+      border-color: var(--ty-green);
+      color: #fff !important;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+    }
+    /* Active/Current State */
+    .ty-step.active .ty-step-ring {
+      background: var(--ty-blue) !important;
+      border-color: var(--ty-blue-light);
+      color: #fff !important;
+      box-shadow: 0 0 15px var(--ty-blue-glow);
+      animation: ty-pulse-ring 2s infinite;
+    }
+    @keyframes ty-pulse-ring {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .ty-step-info {
+      flex: 1;
+      padding-top: 4px;
+    }
+    .ty-step-title {
+      font-family: var(--ty-font-head);
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--ty-text-dim) !important;
+      margin-bottom: 2px;
+    }
+    .ty-step.active .ty-step-title {
+      color: #fff !important;
+    }
+    .ty-step-desc {
+      font-size: .78rem;
+      color: var(--ty-text-muted) !important;
+      line-height: 1.4;
+    }
+
+    /* ══════════════ REFERRAL CONTAINER ══════════════ */
+    .ty-referral {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.06), rgba(139, 92, 246, 0.06)) !important;
+      border: 1px solid rgba(59, 130, 246, 0.16);
+      border-radius: var(--ty-radius);
+      padding: 28px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .ty-referral::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, var(--ty-blue-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .ty-referral-tag {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.08) !important;
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      color: var(--ty-gold) !important;
+      font-family: var(--ty-font-head);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 12px;
+    }
+    .ty-referral-title {
+      font-family: var(--ty-font-head);
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .ty-referral-desc {
+      font-size: .82rem;
+      color: var(--ty-text-dim) !important;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .ty-copy-wrapper {
+      display: flex;
+      background: rgba(0, 0, 0, 0.2) !important;
+      border: 1px solid var(--ty-border);
+      border-radius: 50px;
+      padding: 4px;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--ty-transition);
+    }
+    .ty-copy-wrapper:focus-within {
+      border-color: var(--ty-blue);
+      box-shadow: 0 0 12px rgba(59, 130, 246, 0.15);
+    }
+    .ty-copy-input {
+      background: transparent !important;
+      border: none;
+      color: var(--ty-blue-light);
+      font-family: var(--ty-font-body);
+      font-size: .82rem;
+      font-weight: 600;
+      padding-left: 16px;
+      flex: 1;
+      outline: none;
+    }
+    .ty-copy-btn {
+      background: var(--ty-blue) !important;
+      color: #fff !important;
+      font-family: var(--ty-font-head);
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      padding: 8px 18px;
+      border-radius: 50px;
+      transition: var(--ty-transition);
+    }
+    .ty-copy-btn:hover {
+      background: var(--ty-blue-light) !important;
+      box-shadow: 0 0 10px var(--ty-blue-glow);
+    }
+
+    /* ══════════════ SOCIAL COMMUNITY PROOF ══════════════ */
+    .ty-social {
+      margin-top: 48px;
+      border-top: 1px solid var(--ty-border);
+      padding-top: 48px;
+      text-align: center;
+    }
+    .ty-social-title {
+      font-family: var(--ty-font-head);
+      font-size: 1.6rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+    .ty-social-subtitle {
+      font-size: .92rem;
+      color: var(--ty-text-dim) !important;
+      max-width: 500px;
+      margin: 0 auto 30px;
+    }
+    
+    /* Social Buttons */
+    .ty-social-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .ty-social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-family: var(--ty-font-head);
+      font-size: .88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      transition: var(--ty-transition);
+    }
+    .ty-social-btn.ig {
+      background: linear-gradient(135deg, #833AB4, #E1306C, #F77737) !important;
+      color: #fff !important;
+      box-shadow: 0 4px 15px rgba(225, 48, 108, 0.15);
+    }
+    .ty-social-btn.ig:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(225, 48, 108, 0.35);
+    }
+    .ty-social-btn.x {
+      background: #000 !important;
+      border: 1px solid var(--ty-border);
+      color: #fff !important;
+    }
+    .ty-social-btn.x:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Polaroid Showcase Grid */
+    .ty-polaroids {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 0 auto;
+    }
+    .ty-polaroid {
+      background: var(--ty-card) !important;
+      border: 1px solid var(--ty-border);
+      border-radius: var(--ty-radius-sm);
+      padding: 10px 10px 18px;
+      transition: var(--ty-transition);
+      cursor: pointer;
+    }
+    .ty-polaroid:hover {
+      transform: translateY(-8px) rotate(1deg);
+      border-color: rgba(59, 130, 246, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    /* Elegant rotation offsets for sloppy-chic polaroid aesthetics */
+    .ty-polaroid:nth-child(odd) {
+      transform: rotate(-1deg);
+    }
+    .ty-polaroid:nth-child(even) {
+      transform: rotate(1deg);
+    }
+    .ty-polaroid-img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #000;
+      margin-bottom: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+    .ty-polaroid-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .ty-polaroid-lbl {
+      font-family: var(--ty-font-head);
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--ty-text-dim) !important;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      text-align: left;
+      padding-left: 2px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .ty-polaroid-lbl span.tag {
+      color: var(--ty-blue-light) !important;
+    }
+
+    /* ══════════════ GUARANTEE ══════════════ */
+    .ty-guarantee {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 680px;
+      margin: 48px auto 0;
+      padding: 20px;
+      background: rgba(16, 185, 129, 0.04) !important;
+      border: 1px solid rgba(16, 185, 129, 0.15);
+      border-radius: var(--ty-radius);
+      font-family: var(--ty-font-body);
+      font-size: .82rem;
+      color: var(--ty-green) !important;
+      text-align: left;
+      line-height: 1.5;
+    }
+    .ty-guarantee svg {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    /* ══════════════ FOOTER ══════════════ */
+    .ty-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 40px 24px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .ty-footer p {
+      font-size: .72rem;
+      color: #52525B !important;
+      margin-bottom: 6px;
+    }
+
+    /* ══════════════ CONFETTI ELEMENTS ══════════════ */
+    .ty-confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      z-index: 9999;
+      pointer-events: none;
+      border-radius: 50%;
+    }
+
+    /* ══════════════ RESPONSIVE ══════════════ */
+    @media (max-width: 860px) {
+      .ty-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .ty-polaroids {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Confetti Canvas Container -->
+  <div id="confettiContainer" style="position:fixed; inset:0; pointer-events:none; z-index:9999;"></div>
+
+  <!-- ═══ ANNOUNCEMENT BAR ═══ -->
+  <div class="ty-announce">
+    <span>🎉 Drop Confirmed: Welcome to the YL² Movement 🎉</span>
+  </div>
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="ty-header">
+    <a href="#" aria-label="YL2 Home">
+      <img src="https://maxx1.github.io/yl2-sales-funnel/assets/image0.PNG" alt="YL² Logo">
+    </a>
+    <div class="ty-secure-badge">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+      </svg>
+      <span>Order Secured</span>
+    </div>
+  </div>
+
+  <!-- ═══ MAIN WORKSPACE ═══ -->
+  <div class="ty-container">
+    
+    <!-- Splash Area -->
+    <div class="ty-splash">
+      <div class="ty-check-circle">✓</div>
+      <h1 class="ty-title">You're in. Copped <span class="highlight">Successfully.</span></h1>
+      <p class="ty-subtitle" id="tySubtitle">
+        Your streetwear package is secured. Welcome to the YL² family — You Live and You Learn. Your order details are confirmed below.
+      </p>
+    </div>
+
+    <!-- ══════ GRID WORKSPACE ══════ -->
+    <div class="ty-grid">
+      
+      <!-- Left: Dynamic Receipt & Items -->
+      <div class="ty-left-column">
+        
+        <div class="ty-section-header">
+          <span>Your Copped Items</span>
+          <span class="badge" id="coppedItemCount">1 Item</span>
+        </div>
+
+        <!-- Copped list container -->
+        <div id="coppedItemsContainer" style="display:flex; flex-direction:column; gap:16px;">
+          <!-- Dynamically populated items -->
+        </div>
+
+        <!-- Checkout Pricing Stack -->
+        <div class="ty-receipt">
+          <div class="ty-receipt-title">Order Ledger Summary</div>
+          <div class="ty-receipt-line">
+            <span>Items Subtotal</span>
+            <span id="ledgerSubtotal">$49.99</span>
+          </div>
+          <div class="ty-receipt-line">
+            <span>VIP Insured Shipping</span>
+            <span class="green">FREE</span>
+          </div>
+          <div class="ty-receipt-line" id="ledgerDiscountLine" style="display:none;">
+            <span>One-Time Offer Bundle Discount</span>
+            <span class="green" id="ledgerDiscount">-$15.00</span>
+          </div>
+          <div class="ty-receipt-total">
+            <span>Total Paid</span>
+            <span id="ledgerTotal">$49.99</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right: Tracker & Referral -->
+      <div class="ty-right-column">
+        
+        <!-- Status tracker -->
+        <div class="ty-tracker">
+          <div class="ty-tracker-title">
+            <span>Delivery Pipeline</span>
+            <span class="ty-tracker-badge">Preparing Drop</span>
+          </div>
+
+          <div class="ty-steps">
+            <!-- Step 1 -->
+            <div class="ty-step finished">
+              <div class="ty-step-ring">✓</div>
+              <div class="ty-step-info">
+                <div class="ty-step-title">Order Secured</div>
+                <div class="ty-step-desc">Your order is officially logged and queued for premium processing.</div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="ty-step active">
+              <div class="ty-step-ring">2</div>
+              <div class="ty-step-info">
+                <div class="ty-step-title">Quality Verification & Packaging</div>
+                <div class="ty-step-desc">Our drop team is quality-inspecting and hand-packing your streetwear drop.</div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="ty-step">
+              <div class="ty-step-ring">3</div>
+              <div class="ty-step-info">
+                <div class="ty-step-title">Shipped with Priority Routing</div>
+                <div class="ty-step-desc">We hand off to courier and ping you your tracking link via SMS + Email.</div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="ty-step">
+              <div class="ty-step-ring">4</div>
+              <div class="ty-step-info">
+                <div class="ty-step-title">Delivery Confirmed</div>
+                <div class="ty-step-desc">Your premium streetwear drop lands at your door. Rock it proud.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Referral mechanics -->
+        <div class="ty-referral">
+          <span class="ty-referral-tag">Family Perks</span>
+          <h2 class="ty-referral-title">Give $10, Get $10 🎁</h2>
+          <p class="ty-referral-desc">
+            Invite your crew to copping the YL² collections. When they copped their first piece, they get $10 off, and we drop $10 cash-back onto your card.
+          </p>
+          <div class="ty-copy-wrapper">
+            <input type="text" class="ty-copy-input" id="referUrl" value="https://yl2.co/ref-drop2" readonly>
+            <button class="ty-copy-btn" id="copyBtn" onclick="copyReferral()">Copy Link</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ══════ SOCIAL PROOF FEED ══════ -->
+    <div class="ty-social">
+      <h2 class="ty-social-title">Tag Us In Your Fits 📸</h2>
+      <p class="ty-social-subtitle">
+        Join the streetwear family. Tag <strong style="color:#fff!important;">@yl2clothing</strong> in your stories or fit checks to get featured on our feed!
+      </p>
+
+      <div class="ty-social-btns">
+        <a href="https://www.instagram.com/yl2clothing" target="_blank" class="ty-social-btn ig">
+          📸 Follow @yl2clothing
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=Just%20copped%20the%20new%20YL%C2%B2%20streetwear%20collection%20%F0%9F%94%A5%20@yl2clothing" target="_blank" class="ty-social-btn x">
+          𝕏 Share Fit Check
+        </a>
+      </div>
+
+      <!-- Polaroid Mockup Feed -->
+      <div class="ty-polaroids">
+        <div class="ty-polaroid">
+          <div class="ty-polaroid-img">
+            <img src="https://maxx1.github.io/yl2-sales-funnel/assets/DSC07467.jpg" alt="Streetwear fit Dynasty Blue">
+          </div>
+          <div class="ty-polaroid-lbl">
+            <span>@marcus.yl2</span>
+            <span class="tag">#DynastyBlue</span>
+          </div>
+        </div>
+
+        <div class="ty-polaroid">
+          <div class="ty-polaroid-img">
+            <img src="https://maxx1.github.io/yl2-sales-funnel/assets/DSC07504.jpg" alt="Streetwear fit Obsidian Black">
+          </div>
+          <div class="ty-polaroid-lbl">
+            <span>@sarah_fit</span>
+            <span class="tag">#Obsidian</span>
+          </div>
+        </div>
+
+        <div class="ty-polaroid">
+          <div class="ty-polaroid-img">
+            <img src="https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f410c801633505ef93a11.jpg" alt="Streetwear fit Puff Print">
+          </div>
+          <div class="ty-polaroid-lbl">
+            <span>@tyler_grwm</span>
+            <span class="tag">#Smiley3D</span>
+          </div>
+        </div>
+
+        <div class="ty-polaroid">
+          <div class="ty-polaroid-img">
+            <img src="https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f4139801633505ef93e3d.jpg" alt="Activewear fit Yoga Set">
+          </div>
+          <div class="ty-polaroid-lbl">
+            <span>@jess.moves</span>
+            <span class="tag">#LeopardYoga</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Guarantee Block -->
+    <div class="ty-guarantee">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span><strong>30-Day Money-Back Guarantee:</strong> We've got you covered. If you aren't completely wowed by the streetwear silhouette, printing, or heavy fabric premium weights, we'll swap it out or refund you 100%. No stress.</span>
+    </div>
+
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="ty-footer">
+    <p>&copy; 2026 You Live and You Learn Clothing LLC. All rights reserved.</p>
+    <p style="color:#4b5563 !important; font-size:.65rem;">
+      Need drop support? Shoot us an email at support@yl2clothing.com or DM us on IG.
+    </p>
+  </div>
+
+  <!-- ══════════════ JAVASCRIPT PERSONALIZATION & CONFETTI ══════════════ -->
+  <script>
+    // ══════ INVENTORY DATABASE FOR DYNAMIC VISUAL RENDER ══════
+    const HOODIE_PRODUCTS = {
+      'obsidian-black': {
+        name: "YL² Premium Hoodie — Obsidian Black",
+        meta: "Premium Heavyweight Cotton · Unisex Cut",
+        frontImg: "https://maxx1.github.io/yl2-sales-funnel/assets/DSC07504.jpg",
+        backImg: "https://maxx1.github.io/yl2-sales-funnel/assets/DSC07539.jpg",
+        price: 49.99
+      },
+      'dynasty-blue': {
+        name: "YL² Premium Hoodie — Dynasty Blue",
+        meta: "Premium Heavyweight Cotton · Unisex Cut",
+        frontImg: "https://maxx1.github.io/yl2-sales-funnel/assets/DSC07467.jpg",
+        backImg: "https://maxx1.github.io/yl2-sales-funnel/assets/DSC07501.jpg",
+        price: 49.99
+      }
+    };
+
+    const OTO_PRODUCTS = {
+      long_sleeve: {
+        name: "YL² 3D Puff Print Long Sleeve",
+        price: 24.99,
+        colors: {
+          'Chocolate Brown': "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f410c801633505ef93a11.jpg",
+          'Drippy Orange': "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f40fa6b8ea8a8274196f4.jpg"
+        }
+      },
+      yoga_set: {
+        name: "YL² '50 Shades' Leopard Yoga Set",
+        price: 24.99,
+        colors: {
+          'Desert Stone': "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f4139801633505ef93e3d.jpg",
+          'Icy Blue': "https://assets.cdn.filesafe.space/kdUF8jbEDoKmjywltgyx/media/6a0f41623c3b60d82315910c.jpg"
+        }
+      }
+    };
+
+    // ══════ DOM PERSONALIZER ON LOAD ══════
+    document.addEventListener("DOMContentLoaded", function() {
+      // 1. Fire Confetti Showers
+      fireConfettiShower(120);
+
+      // 2. Personalize Order
+      personalizeThankYouPage();
+    });
+
+    function personalizeThankYouPage() {
+      // Retrieve localStorage elements
+      const hoodieColor = localStorage.getItem('yl2_copped_hoodie_color') || 'obsidian-black';
+      const hoodieSize = localStorage.getItem('yl2_copped_hoodie_size') || 'M';
+      
+      const isOtoUpgraded = localStorage.getItem('yl2_oto_upgraded') === 'true';
+      const otoCategory = localStorage.getItem('yl2_oto_category');
+      const otoColor = localStorage.getItem('yl2_oto_color');
+      const otoSize = localStorage.getItem('yl2_oto_size');
+
+      // Populate elements
+      const listContainer = document.getElementById('coppedItemsContainer');
+      listContainer.innerHTML = ''; // reset
+
+      let subtotal = 0;
+      let itemsCount = 0;
+
+      // Render Hoodie Card
+      const hoodie = HOODIE_PRODUCTS[hoodieColor] || HOODIE_PRODUCTS['obsidian-black'];
+      subtotal += hoodie.price;
+      itemsCount++;
+
+      const hoodieHtml = `
+        <div class="ty-item-card">
+          <div class="ty-item-img">
+            <img src="${hoodie.frontImg}" alt="Hoodie Front View" class="front">
+            <img src="${hoodie.backImg}" alt="Hoodie Back View" class="back">
+          </div>
+          <div class="ty-item-details">
+            <h3 class="ty-item-name">${hoodie.name}</h3>
+            <div class="ty-item-meta">
+              <span>Size: ${hoodieSize}</span>
+              <span>100% Premium Cotton</span>
+            </div>
+          </div>
+          <div class="ty-item-price">$${hoodie.price.toFixed(2)}</div>
+        </div>
+      `;
+      listContainer.innerHTML += hoodieHtml;
+
+      // Render OTO Card if copped
+      if (isOtoUpgraded && OTO_PRODUCTS[otoCategory]) {
+        const oto = OTO_PRODUCTS[otoCategory];
+        const otoImg = oto.colors[otoColor] || Object.values(oto.colors)[0];
+        
+        subtotal += oto.price;
+        itemsCount++;
+
+        const otoHtml = `
+          <div class="ty-item-card">
+            <div class="ty-item-img">
+              <img src="${otoImg}" alt="Upgrade Item View" class="front">
+            </div>
+            <div class="ty-item-details">
+              <h3 class="ty-item-name">${oto.name}</h3>
+              <div class="ty-item-meta">
+                <span>Color: ${otoColor}</span>
+                <span>Size: ${otoSize}</span>
+                <span>Drop Exclusive</span>
+              </div>
+            </div>
+            <div class="ty-item-price">$${oto.price.toFixed(2)}</div>
+          </div>
+        `;
+        listContainer.innerHTML += otoHtml;
+
+        // Render Ledger discount OTO info
+        document.getElementById('ledgerDiscountLine').style.display = 'flex';
+      }
+
+      // Update Ledger values
+      document.getElementById('coppedItemCount').textContent = `${itemsCount} Item${itemsCount > 1 ? 's' : ''}`;
+      document.getElementById('ledgerSubtotal').textContent = `$${subtotal.toFixed(2)}`;
+      document.getElementById('ledgerTotal').textContent = `$${subtotal.toFixed(2)}`;
+
+      // Update dynamic custom title or subtitle with query parameters
+      const params = new URLSearchParams(window.location.search);
+      // Attempt to capture contact name from GHL contact merge code (e.g. ?name={{contact.first_name}})
+      const contactName = params.get('name') || params.get('first_name');
+      if (contactName && !contactName.includes('{')) {
+        document.getElementById('tySubtitle').innerHTML = `
+          Hey <strong>${contactName}</strong>, your streetwear package is secured. Welcome to the YL² family — You Live and You Learn. Your order details are confirmed below.
+        `;
+      }
+    }
+
+    // ══════ INTERACTIVE REFERRAL LINK COPY ══════
+    function copyReferral() {
+      const copyText = document.getElementById("referUrl");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); // for mobile devices
+      
+      navigator.clipboard.writeText(copyText.value);
+
+      const copyBtn = document.getElementById("copyBtn");
+      copyBtn.textContent = "Copied! ✓";
+      copyBtn.style.background = "#10B981"; // turn green on success
+      
+      setTimeout(function() {
+        copyBtn.textContent = "Copy Link";
+        copyBtn.style.background = "var(--ty-blue)";
+      }, 2500);
+    }
+
+    // ══════ PURE LIGHTWEIGHT CONFETTI PARTICLE SYSTEM ══════
+    function fireConfettiShower(count) {
+      const container = document.getElementById('confettiContainer');
+      const colors = ['#3B82F6', '#60A5FA', '#10B981', '#F59E0B', '#EF4444', '#FFFFFF'];
+
+      for (let i = 0; i < count; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'ty-confetti';
+        
+        // Random style specs
+        const w = 6 + Math.random() * 8;
+        const h = 5 + Math.random() * 6;
+        confetti.style.width = w + 'px';
+        confetti.style.height = h + 'px';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+
+        // Start position centered at top
+        const startX = 10 + Math.random() * 80; // random percentage width
+        confetti.style.left = startX + 'vw';
+        confetti.style.top = '-20px';
+        
+        // Motion animations
+        const drift = -15 + Math.random() * 30; // horizontal drift
+        const duration = 2.5 + Math.random() * 3; // speed
+        const rot = Math.random() * 360;
+
+        confetti.style.transform = `rotate(${rot}deg)`;
+        confetti.style.transition = `transform ${duration}s linear, top ${duration}s cubic-bezier(0.1, 0.8, 0.3, 1), left ${duration}s ease-out`;
+
+        container.appendChild(confetti);
+
+        // Schedule falling frame transition to bypass browser optimization
+        setTimeout(() => {
+          confetti.style.top = '105vh';
+          confetti.style.left = (startX + drift) + 'vw';
+          confetti.style.transform = `rotate(${rot + 720}deg) scale(0.2)`;
+        }, 50);
+
+        // Cleanup element after falling
+        setTimeout(() => {
+          confetti.remove();
+        }, duration * 1000 + 100);
+      }
+    }
+  </script>
+
+  <!-- ══════ NATIVE GHL BACKGROUND NUKE SCRIPTS ══════ -->
+  <script>
+    function nukeGHLBackgrounds() {
+      let el = document.querySelector('.ty-container');
+      while (el && el !== document.documentElement) {
+        el.style.setProperty('background','#0a0a0a','important');
+        el.style.setProperty('max-width','100%','important');
+        el.style.setProperty('width','100%','important');
+        el.style.setProperty('padding-left','0','important');
+        el.style.setProperty('padding-right','0','important');
+        el.style.setProperty('margin','0','important');
+        el = el.parentElement;
+      }
+      document.querySelectorAll('[class*="hl_"],[class*="hl-"]').forEach(e => {
+        e.style.setProperty('background','#0a0a0a','important');
+        e.style.setProperty('max-width','100%','important');
+      });
+      document.documentElement.style.setProperty('background','#0a0a0a','important');
+      document.body.style.setProperty('background','#0a0a0a','important');
+    }
+    document.addEventListener('DOMContentLoaded',()=>{
+      nukeGHLBackgrounds();
+      setTimeout(nukeGHLBackgrounds, 300);
+      setTimeout(nukeGHLBackgrounds, 1000);
+      setTimeout(nukeGHLBackgrounds, 2000);
+    });
+    window.addEventListener('load', nukeGHLBackgrounds);
+  </script>
+
+</body>
+</html>
