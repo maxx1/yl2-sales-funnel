@@ -522,6 +522,26 @@ function showStep(n) {
   if (n === 2) document.getElementById('tab1').classList.add('completed');
 }
 
+// --- PHONE AUTO-FORMAT (xxx) xxx-xxxx ---
+(function() {
+  function formatPhone(value) {
+    const digits = value.replace(/\D/g, '').substring(0, 10);
+    if (digits.length === 0) return '';
+    if (digits.length <= 3) return '(' + digits;
+    if (digits.length <= 6) return '(' + digits.slice(0,3) + ') ' + digits.slice(3);
+    return '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
+  }
+  document.addEventListener('input', function(e) {
+    if (e.target && e.target.id === 'phone') {
+      const cursorPos = e.target.selectionStart;
+      const oldLen = e.target.value.length;
+      e.target.value = formatPhone(e.target.value);
+      const newLen = e.target.value.length;
+      const newPos = cursorPos + (newLen - oldLen);
+      e.target.setSelectionRange(newPos, newPos);
+    }
+  });
+})();
 
 
 // --- RESERVATION TIMER (15 min) ---
